@@ -2,38 +2,26 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>フィルター製造販売会社</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/header.css">
+  <title>協和合成株式会社 | フィルター製造販売</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/privacy.css">
 
 </head>
 <body>
-  <% include header %>
+  <%- include('partials/header') %>
     <!-- ヘッダーのインクルード -->
-
-
-    <section id="home">
-      <h2>ホーム</h2>
-      <!-- コンテンツをここに追加 -->
-    </section>
-
-    <section id="about">
-      <h2>事業内容</h2>
-      <!-- コンテンツをここに追加 -->
-    </section>
-
-    <section id="catalog">
-      <h2>商品カタログ</h2>
-      <!-- コンテンツをここに追加 -->
-    </section>
-
-    <section id="contact">
-      <h2>お問い合わせ</h2>
-      <!-- コンテンツをここに追加 -->
-    </section>
-
-    <footer>
-      <p>© 2023 フィルター製造販売会社</p>
-    </footer>
+    <%- include('about') %>
+      <!-- 事業内容セクションのインクルード -->
+      <%- include('catalog') %>
+        <!-- 商品カタログセクションのインクルード -->
+        <%- include('contact') %>
+          <!-- お問い合わせセクションのインクルード -->
+          <%- include('partials/footer') %>
+            <!-- フッターのインクルード -->
 </body>
 </html>

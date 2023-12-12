@@ -12,6 +12,14 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/privacy', (req, res) => {
+  res.render('privacy');
+});
+
+app.get('/company', (req, res) => {
+  res.render('company');
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
