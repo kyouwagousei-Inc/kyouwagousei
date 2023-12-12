@@ -1,0 +1,24 @@
+{
+  "name": "kyowagosei",
+  "version": "1.0.0",
+  "description": "kyowagosei",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tokichi-m/kyowagosei.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tokichi-m/kyowagosei/issues"
+  },
+  "homepage": "https://github.com/tokichi-m/kyowagosei#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
