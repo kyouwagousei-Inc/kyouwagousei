@@ -1,7 +1,9 @@
+/* 全体のフォントと背景 */
 body {
-  font-family: 'Noto Sans', sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Noto Sans', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
 }
 
 .container {
@@ -10,20 +12,20 @@ body {
   padding: 15px;
 }
 
+/* ヘッダーのスタイル */
 .site-header {
-  background-color: #f0f0f0;
-  padding: 10px 0;
+  background-color: #007BFF;
+  color: #ffffff;
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
 }
 
+/* ナビゲーションメニューのスタイル */
 .main-navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
+  padding-top: 10px;
+  justify-content: space-around;
 }
 
 .main-navigation li {
@@ -40,23 +42,65 @@ body {
   display: none;
 }
 
+.menu-item {
+  padding: 10px 20px;
+}
+
+.menu-item a:hover, .menu-item a:focus {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+/* メインコンテンツ */
+main {
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* フッターのスタイル */
+.site-footer {
+  background-color: #007BFF;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
 @media screen and (max-width: 768px) {
   .menu-toggle {
       display: block;
   }
 
   .main-navigation ul {
-      display: none;
-  }
+    display: none; /* メニューを非表示に設定 */
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* モバイルビューでのメニューの幅を調整 */
+}
 
   .main-navigation ul.active {
       display: block;
   }
+  .menu-item {
+    padding: 10px;
 }
 
-.site-footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
+.menu {
+    background-color: #007BFF;
+}
+
+.menu.active {
+  display: flex; /* アクティブ時にメニューを表示 */
+}
 }

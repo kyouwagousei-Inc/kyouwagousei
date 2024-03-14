@@ -7,4 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
         this.setAttribute('aria-expanded', !isExpanded);
         primaryMenu.classList.toggle('active');
     });
+
+    // スムーズスクロール
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
