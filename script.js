@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.querySelector('.menu-toggle');
-    var menu = document.querySelector('.main-navigation ul');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const primaryMenu = document.querySelector('#primary-menu');
 
     menuToggle.addEventListener('click', function() {
-        var expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !expanded);
-        menu.classList.toggle('active');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        primaryMenu.classList.toggle('active');
     });
 });
