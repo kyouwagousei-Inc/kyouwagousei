@@ -3,51 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>協和合成株式会社</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>空調設備/フィルター製造会社 | 株式会社協和合成</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-
-<header class="site-header">
-    <div class="container">
-        <h1 class="logo"><a href="#home"><img src="img/logo.svg" alt="協和合成株式会社"></a></h1>
-        <nav class="main-navigation">
-            <button class="menu-toggle" aria-expanded="false">メニュー</button>
-            <ul id="primary-menu" class="menu">
-                <li class="menu-item"><a href="#home">ホーム</a></li>
-                <li class="menu-item"><a href="#about">事業内容</a></li>
-                <li class="menu-item"><a href="#catalog">商品カタログ</a></li>
-                <li class="menu-item"><a href="#contact">お問い合わせ</a></li>
+    <header>
+        <nav aria-label="グローバルナビ">
+            <a href="#" class="logo" aria-label="株式会社協和合成のロゴ">
+                <img src="img/logo.svg" alt="株式会社協和合成のロゴ" width="50" height="50">
+            </a>
+            <button class="nav-toggle" aria-label="メニューを開閉するボタン" aria-expanded="false">メニュー</button>
+            <div class="menu-overlay"></div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">ホーム</a></li>
+                <li><a href="#services" class="nav-link">事業内容</a></li>
+                <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
+                <li><a href="#access" class="nav-link">アクセス</a></li>
+                <li><a href="#about" class="nav-link">会社概要</a></li>
+                <li><a href="#jobs" class="nav-link">求人情報</a></li>
             </ul>
         </nav>
-    </div>
-</header>
+    </header>
 
-<main>
-    <section id="home">
-        <h2>ホーム</h2>
-        <p>協和合成株式会社へようこそ。当社は、高品質な製品を提供することで、お客様のニーズにお応えします。</p>
-    </section>
-    <section id="about">
-        <h2>事業内容</h2>
-        <p>当社は、エアーフィルター、オイルフィルターの製造販売を行っています。</p>
-    </section>
-    <section id="catalog">
-        <h2>商品カタログ</h2>
-        <p>当社の製品ラインナップをご紹介します。</p>
-    </section>
-    <section id="contact">
-        <h2>お問い合わせ</h2>
-        <p>製品に関するお問い合わせは、こちらからどうぞ。</p>
-    </section>
-</main>
+    <main>
+        <section id="home" class="hero" data-aos="fade-up">
+            <div class="hero-content">
+                <h1>空調設備のトータルソリューション</h1>
+                <p>長年にわたる知識と経験を基に、お客様に最適な空調環境を提供します。快適で効率的な空間づくりを目指します。</p>
+                <div class="cta">
+                    <a href="#services" class="cta-button">詳しく見る</a>
+                </div>
+                <div class="hero-image">
+                    <img src="img/hero-image.webp" alt="空調設備のイメージ" width="100%">
+                </div>
+            </div>
+        </section>
 
-<footer class="site-footer">
-    <div class="container">
-        <p>©2024 協和合成株式会社. All rights reserved.</p>
-    </div>
-</footer>
+        <section id="services" data-aos="fade-right">
+            <h2>事業内容</h2>
+            <ul>
+                <li>空調設備の設計</li>
+                <li>施工および保守</li>
+                <li>メンテナンスと改善提案</li>
+            </ul>
+            <div class="services-image">
+                <img src="img/services.webp" alt="事業内容のイメージ" width="100%">
+            </div>
+            <!-- <div class="cta">
+                <a href="#contact" class="cta-button">お問い合わせ</a>
+            </div> -->
+        </section>
 
-<script src="script.js"></script>
+        <section id="contact" data-aos="fade-left">
+            <h2>お問い合わせ</h2>
+            <p>空調設備に関するご相談は、メールまたは電話でお気軽にお問い合わせください。</p>
+            <table>
+                <tr>
+                    <th>電話番号</th>
+                    <td>03-1234-5678</td>
+                </tr>
+                <tr>
+                    <th>メール</th>
+                    <td><a href="mailto:info@kyowa-gousei.co.jp">info@kyowa-gousei.co.jp</a></td>
+                </tr>
+            </table>
+            <!-- <div class="contact-image">
+                <img src="img/contact.jpg" alt="お問い合わせのイメージ" width="100%">
+            </div> -->
+            <div class="cta">
+                <a href="#" class="cta-button">フォームで問い合わせ</a>
+            </div>
+        </section>
+
+        <section id="access" data-aos="fade-up">
+            <h2>アクセス</h2>
+            <p>本社所在地: 東京都文京区本駒込6-5-3 ビューネ本駒込ビル8階</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51794.509545768786!2d139.69700685321857!3d35.77152334539303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188da2b33a052d%3A0xa1f7fd8501cd738c!2z5Y2U5ZKM5ZCI5oiQ44ix!5e0!3m2!1sja!2sjp!4v1737097754123!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        
+
+        <section id="about" data-aos="fade-right">
+            <h2>会社概要</h2>
+            <p>設立: 1961年11月<br>代表取締役: 佐久間 克己<br>従業員数: 10名</p>
+            <div class="about-image">
+                <img src="img/about.webp" alt="会社概要のイメージ" width="100%">
+            </div>
+            <div class="cta">
+                <a href="#about" class="cta-button">会社情報を見る</a>
+            </div>
+        </section>
+
+        <section id="jobs" data-aos="fade-left">
+            <h2>求人情報</h2>
+            <p>現在、技術者および営業職を積極的に募集しています。</p>
+            <!-- <div class="jobs-image">
+                <img src="img/jobs.jpg" alt="求人情報のイメージ" width="100%">
+            </div> -->
+            <div class="cta">
+                <a href="#contact" class="cta-button">応募はこちら</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 株式会社協和合成. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

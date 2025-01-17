@@ -1,0 +1,321 @@
+/* グローバルスタイル */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header {
+  background: #0077C8;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.menu-overlay.open {
+  display: block;
+  opacity: 1;
+}
+
+/* セクションスタイル */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+
+#home {
+  background: linear-gradient(to bottom, #E5F3FF, #ffffff);
+  text-align: center;
+}
+
+#home .hero-image {
+  margin-top: 2rem;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#services {
+  background: #f4f8fc;
+}
+
+#services .services-image {
+  margin-top: 1.5rem;
+  text-align: center;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact {
+  background: #ffffff;
+}
+
+#contact .contact-image {
+  margin-top: 1.5rem;
+  text-align: center;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#access {
+  background: #f4f8fc;
+}
+
+#access .access-image {
+  margin-top: 1.5rem;
+  text-align: center;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#access .map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+#access iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#about {
+  background: #ffffff;
+}
+
+#about .about-image {
+  margin-top: 1.5rem;
+  text-align: center;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#jobs {
+  background: #f4f8fc;
+}
+
+#jobs .jobs-image {
+  margin-top: 1.5rem;
+  text-align: center;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2 {
+  color: #0077C8;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  margin-top: 2rem;
+}
+
+.cta-button {
+  background-color: #0077C8;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #005f9e;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* テーブルスタイル */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f8fc;
+}
+
+/* フッタースタイル */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* レスポンシブスタイル */
+@media (max-width: 768px) {
+  .nav-toggle {
+      display: block;
+  }
+
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 80%;
+      height: 100%;
+      background: #0077C8;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 1100;
+      padding-top: 5rem;
+  }
+
+  .nav-menu.open {
+      display: flex;
+      transform: translateX(0);
+  }
+
+  .menu-overlay.open {
+      display: block;
+  }
+
+  .nav-menu a {
+      color: white;
+      font-size: 1.2rem;
+  }
+
+  .nav-menu a:hover {
+      text-decoration: underline;
+  }
+
+  #home .hero-image,
+  #services .services-image,
+  #contact .contact-image,
+  #access .access-image,
+  #about .about-image,
+  #jobs .jobs-image {
+      max-width: 90%;
+  }
+
+  #access .map-container {
+    padding-top: 75%; /* Adjust aspect ratio for tablets */
+}
+}
+
+@media (max-width: 425px) {
+  header {
+      padding: 1rem;
+  }
+
+  .nav-menu a {
+      font-size: 0.9rem;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  h2 {
+      font-size: 1.2rem;
+  }
+
+  main {
+      padding: 1rem;
+  }
+
+  #access .map-container {
+    padding-top: 100%; /* Square aspect ratio for smaller screens */
+}
+}
