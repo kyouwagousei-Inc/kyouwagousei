@@ -74,6 +74,25 @@ nav {
   opacity: 1;
 }
 
+.category-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.category-list button {
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#product-list, #product-details {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
 /* セクションスタイル */
 main {
   max-width: 1200px;
@@ -102,6 +121,58 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
+
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: auto; /* 縦横比を維持して縮小・拡大 */
+  object-fit: cover; /* 画像の切り抜きスタイル */
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.slider-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 
 #services {
   background: #f4f8fc;
@@ -237,6 +308,39 @@ footer {
   background: #333;
   color: white;
   font-size: 0.9rem;
+}
+
+
+/* 画像サイズのレスポンシブ対応 */
+@media (min-width: 1025px) {
+  /* デスクトップ */
+  .hero-slider {
+      height: 500px;
+  }
+
+  .slide img {
+      height: 500px; /* デスクトップ時の高さを固定 */
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* タブレット */
+  .hero-slider {
+      height: 400px;
+  }
+
+  .slide img {
+      height: 400px; /* タブレット時の高さ */
+  }
+}
+@media (max-width: 767px) {
+  /* スマートフォン */
+  .hero-slider {
+      height: 250px;
+  }
+
+  .slide img {
+      height: 250px; /* スマートフォン時の高さ */
+  }
 }
 
 /* レスポンシブスタイル */

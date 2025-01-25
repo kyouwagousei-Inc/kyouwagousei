@@ -11,17 +11,17 @@
     <header>
         <nav aria-label="グローバルナビ">
             <a href="#" class="logo" aria-label="株式会社協和合成のロゴ">
-                <img src="img/logo.svg" alt="株式会社協和合成のロゴ" width="50" height="50">
+                <img src="img/logo.svg" alt="株式会社協和合成のロゴ" width="150" height="50">
             </a>
             <button class="nav-toggle" aria-label="メニューを開閉するボタン" aria-expanded="false">メニュー</button>
             <div class="menu-overlay"></div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">ホーム</a></li>
+                <li><a href="index.html" class="nav-link">ホーム</a></li>
+                <li><a href="product.html" class="nav-link">製品情報</a></li>
                 <li><a href="#services" class="nav-link">事業内容</a></li>
                 <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
-                <li><a href="#access" class="nav-link">アクセス</a></li>
-                <li><a href="#about" class="nav-link">会社概要</a></li>
-                <li><a href="#jobs" class="nav-link">求人情報</a></li>
+                <li><a href="about.html" class="nav-link">会社概要</a></li>
+                <li><a href="jobs.html" class="nav-link">求人情報</a></li>
             </ul>
         </nav>
     </header>
@@ -34,11 +34,54 @@
                 <div class="cta">
                     <a href="#services" class="cta-button">詳しく見る</a>
                 </div>
-                <div class="hero-image">
-                    <img src="img/hero-image.webp" alt="空調設備のイメージ" width="100%">
+                <div class="hero-slider">
+                    <div class="slides">
+                        <div class="slide active">
+                            <img src="img/hero-image.webp" alt="空調設備のイメージ1" width="100%">
+                        </div>
+                        <div class="slide">
+                            <img src="img/about.webp" alt="空調設備のイメージ2" width="100%">
+                        </div>
+                        <div class="slide">
+                            <img src="img/hero-image.webp" alt="空調設備のイメージ3" width="100%">
+                        </div>
+                        <div class="slide">
+                            <img src="img/about.webp" alt="空調設備のイメージ4" width="100%">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="prev">←</button>
+                        <button class="next">→</button>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <section id="products" data-aos="fade-up">
+            <h2>製品情報</h2>
+            <p>当社は空調設備に最適なフィルターを製造しています。高性能で環境に優しい製品を提供することで、持続可能な社会に貢献します。</p>
+            <div class="products-list">
+                <article class="product">
+                    <h3>HEPAフィルター</h3>
+                    <p>微細な粒子を99.97%以上除去し、清潔な空気環境を実現します。</p>
+                    <img src="img/hepa-filter.jpg" alt="HEPAフィルターの画像" width="100%">
+                </article>
+                <article class="product">
+                    <h3>活性炭フィルター</h3>
+                    <p>臭いや有害物質を効果的に除去し、快適な空間を提供します。</p>
+                    <img src="img/charcoal-filter.jpg" alt="活性炭フィルターの画像" width="100%">
+                </article>
+                <article class="product">
+                    <h3>プレフィルター</h3>
+                    <p>大きな粒子や汚れをキャッチし、フィルター寿命を延ばします。</p>
+                    <img src="img/pre-filter.jpg" alt="プレフィルターの画像" width="100%">
+                </article>
+            </div>
+            <div class="cta">
+                <a href="product.html" class="cta-button">詳しく見る</a>
+            </div>
+        </section>
+        
 
         <section id="services" data-aos="fade-right">
             <h2>事業内容</h2>
@@ -75,35 +118,27 @@
                 <a href="#" class="cta-button">フォームで問い合わせ</a>
             </div>
         </section>
-
-        <section id="access" data-aos="fade-up">
-            <h2>アクセス</h2>
-            <p>本社所在地: 東京都文京区本駒込6-5-3 ビューネ本駒込ビル8階</p>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51794.509545768786!2d139.69700685321857!3d35.77152334539303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188da2b33a052d%3A0xa1f7fd8501cd738c!2z5Y2U5ZKM5ZCI5oiQ44ix!5e0!3m2!1sja!2sjp!4v1737097754123!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
         
-
         <section id="about" data-aos="fade-right">
             <h2>会社概要</h2>
             <p>設立: 1961年11月<br>代表取締役: 佐久間 克己<br>従業員数: 10名</p>
             <div class="about-image">
-                <img src="img/about.webp" alt="会社概要のイメージ" width="100%">
             </div>
             <div class="cta">
-                <a href="#about" class="cta-button">会社情報を見る</a>
+                <a href="about.html" class="cta-button">会社情報を見る</a>
             </div>
         </section>
 
         <section id="jobs" data-aos="fade-left">
             <h2>求人情報</h2>
-            <p>現在、技術者および営業職を積極的に募集しています。</p>
+            <p>現在、製造および納品作業スタッフを募集しています。
+                埼玉県戸田市工場で空調フィルターの組立て製作、近県への納品作業を行います。未経験者歓迎！
+            </p>
             <!-- <div class="jobs-image">
                 <img src="img/jobs.jpg" alt="求人情報のイメージ" width="100%">
             </div> -->
             <div class="cta">
-                <a href="#contact" class="cta-button">応募はこちら</a>
+                <a href="jobs.html" class="cta-button">詳細はこちら</a>
             </div>
         </section>
     </main>

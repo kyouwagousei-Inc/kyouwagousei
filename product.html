@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製品情報 | 株式会社協和合成</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/product.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav aria-label="グローバルナビ">
+            <a href="index.html" class="logo" aria-label="株式会社協和合成のロゴ">
+                <img src="img/logo.svg" alt="株式会社協和合成のロゴ" width="50" height="50">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">ホーム</a></li>
+                <li><a href="product.html" class="nav-link">製品情報</a></li>
+                <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="categories">
+            <h1>製品カテゴリ</h1>
+            <ul class="category-list">
+                <li><button data-category="airfilter">Air Filters</button></li>
+                <li><button data-category="oil">Oil Products</button></li>
+                <li><button data-category="gas">Gas Products</button></li>
+                <li><button data-category="etc">その他</button></li>
+            </ul>
+        </section>
+
+        <section id="product-list" hidden>
+            <h2 id="category-title">製品一覧</h2>
+            <ul class="product-list">
+                <li><button data-product="Air Filter 1"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Air+Filter+1"> Air Filter 1</button></li>
+                <li><button data-product="Air Filter 2"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Air+Filter+2" alt="Air Filter 2"> Air Filter 2</button></li>
+                <li><button data-product="Air Filter 3"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Air+Filter+3" alt="Air Filter 3"> Air Filter 3</button></li>
+                <li><button data-product="Air Filter 4"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Air+Filter+4" alt="Air Filter 4"> Air Filter 4</button></li>
+                <li><button data-product="Air Filter 5"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Air+Filter+5" alt="Air Filter 5"> Air Filter 5</button></li>
+                <li><button data-product="Oil Product 1"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Oil+Product+1" alt="Oil Product 1"> Oil Product 1</button></li>
+                <li><button data-product="Oil Product 2"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Oil+Product+2" alt="Oil Product 2"> Oil Product 2</button></li>
+                <li><button data-product="Oil Product 3"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Oil+Product+3" alt="Oil Product 3"> Oil Product 3</button></li>
+                <li><button data-product="Oil Product 4"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Oil+Product+4" alt="Oil Product 4"> Oil Product 4</button></li>
+                <li><button data-product="Oil Product 5"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Oil+Product+5" alt="Oil Product 5"> Oil Product 5</button></li>
+                <li><button data-product="Gas Product 1"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Gas+Product+1" alt="Gas Product 1"> Gas Product 1</button></li>
+                <li><button data-product="Gas Product 2"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Gas+Product+2" alt="Gas Product 2"> Gas Product 2</button></li>
+                <li><button data-product="Gas Product 3"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Gas+Product+3" alt="Gas Product 3"> Gas Product 3</button></li>
+                <li><button data-product="Gas Product 4"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Gas+Product+4" alt="Gas Product 4"> Gas Product 4</button></li>
+                <li><button data-product="Gas Product 5"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Gas+Product+5" alt="Gas Product 5"> Gas Product 5</button></li>
+                <li><button data-product="Other Product 1"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Other+Product+1" alt="Other Product 1"> Other Product 1</button></li>
+                <li><button data-product="Other Product 2"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Other+Product+2" alt="Other Product 2"> Other Product 2</button></li>
+                <li><button data-product="Other Product 3"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Other+Product+3" alt="Other Product 3"> Other Product 3</button></li>
+                <li><button data-product="Other Product 4"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Other+Product+4" alt="Other Product 4"> Other Product 4</button></li>
+                <li><button data-product="Other Product 5"><img src="https://placehold.jp/24/cccccc/ffffff/250x50.png?text=Other+Product+5" alt="Other Product 5"> Other Product 5</button></li>
+            </ul>
+            <button id="back-to-categories">カテゴリに戻る</button>
+        </section>
+
+        <section id="product-details" hidden>
+            <h2 id="product-title">製品詳細</h2>
+            <p id="product-description"></p>
+            <img id="product-image" src="" alt="製品画像">
+            <button id="back-to-products">製品一覧に戻る</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 株式会社協和合成. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
