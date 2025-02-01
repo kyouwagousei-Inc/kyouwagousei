@@ -1,425 +1,297 @@
-/* グローバルスタイル */
-body {
-  font-family: "Noto Sans JP", sans-serif;
+/* リセット・ベーススタイル */
+* {
   margin: 0;
   padding: 0;
-  line-height: 1.8;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
-header {
-  background: #0077C8;
-  color: white;
-  padding: 1rem 2rem;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  padding: 0;
-}
-
-.nav-menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s ease;
-}
-
-.nav-menu a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: 2px solid white;
-  color: white;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-
-.menu-overlay.open {
-  display: block;
-  opacity: 1;
-}
-
-.category-list {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.category-list button {
-  padding: 10px 20px;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  cursor: pointer;
-}
-
-#product-list, #product-details {
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
-}
-
-/* セクションスタイル */
-main {
+/* コンテナ */
+.container {
+  width: 90%;
   max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
-  background: white;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
-section {
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 5px;
+/* ヘッダーコンポーネント外部用スタイル（必要に応じて上書き可能） */
+header.header {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
 }
 
-#home {
-  background: linear-gradient(to bottom, #E5F3FF, #ffffff);
-  text-align: center;
-}
-
-#home .hero-image {
-  margin-top: 2rem;
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* ヒーローセクション・スライダーの基本設定 */
+.hero-section {
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-slider {
   position: relative;
-  overflow: hidden;
   width: 100%;
   height: auto;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  flex-shrink: 0;
-  display: none;
-}
-
-.slide.active {
-  display: block;
-}
-
-.slide img {
-  width: 100%;
-  height: auto; /* 縦横比を維持して縮小・拡大 */
-  object-fit: cover; /* 画像の切り抜きスタイル */
-}
-
-.slider-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.slider-controls button {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.slider-controls button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-
-#services {
-  background: #f4f8fc;
-}
-
-#services .services-image {
-  margin-top: 1.5rem;
-  text-align: center;
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#contact {
-  background: #ffffff;
-}
-
-#contact .contact-image {
-  margin-top: 1.5rem;
-  text-align: center;
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#access {
-  background: #f4f8fc;
-}
-
-#access .access-image {
-  margin-top: 1.5rem;
-  text-align: center;
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#access .map-container {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-#access iframe {
+/* 各スライドは同じ位置に重ね、active クラスが付いたものだけ表示 */
+.hero-slider .slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  border: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-#about {
-  background: #ffffff;
+.hero-slider .slide.active {
+  opacity: 1;
+  position: relative;
 }
 
-#about .about-image {
-  margin-top: 1.5rem;
-  text-align: center;
-  max-width: 50%;
+/* 画像の設定 */
+.hero-image {
+  width: 100%;
   height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-#jobs {
-  background: #f4f8fc;
-}
-
-#jobs .jobs-image {
-  margin-top: 1.5rem;
+/* テキストオーバーレイ */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
   text-align: center;
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
-h1, h2 {
-  color: #0077C8;
+/* 前後ナビゲーション（ボタン）の設定 */
+.slider-nav {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.slider-nav button {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.slider-nav button:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* 各セクション */
+section {
+  padding: 4rem 0;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.section-text {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 製品セクション */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.product-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+}
+.product-image {
+  width: 100%;
+  height: auto;
+}
+.product-title {
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem;
+}
+.product-description {
+  font-size: 1rem;
+}
+
+/* フィルタータブ */
+.filter-tabs {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.filter-tab {
+  background: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.filter-tab.active,
+.filter-tab:hover {
+  background: #ddd;
+}
+
+/* フィルターオプション */
+.filter-options {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.filter-option {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background: #f0f0f0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.filter-option.active,
+.filter-option:hover {
+  background: #ccc;
+}
+
+
+/* 最新情報セクション */
+.news-section {
+  position: relative;
+  overflow: hidden;
+  /* 最低限の高さを設定（必要に応じて調整） */
+  min-height: 50px;
+}
+
+.news-list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 50px; /* 表示する高さに合わせて調整 */
+}
+
+.news-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.news-item.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* お問い合わせセクション */
+.contact-section {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+.contact-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+.contact-section .section-title {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
-
-.cta {
-  margin-top: 2rem;
+.contact-section .section-text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+.contact-info {
+  margin-bottom: 2rem;
+}
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
 }
 
-.cta-button {
-  background-color: #0077C8;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #005f9e;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* テーブルスタイル */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-}
-
-th, td {
+/* お問い合わせフォーム */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   text-align: left;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.form-group input,
+.form-group textarea {
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.submit-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  background-color: #0066cc;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: #005bb5;
 }
 
-th {
-  background-color: #f4f8fc;
-}
 
-/* フッタースタイル */
-footer {
+
+/* フッター */
+.site-footer {
+  background-color: #f7f7f7;
+  padding: 1rem 0;
   text-align: center;
-  padding: 1rem;
-  background: #333;
-  color: white;
+  border-top: 1px solid #ccc;
+}
+.footer-text {
   font-size: 0.9rem;
+  color: #666;
 }
 
-
-/* 画像サイズのレスポンシブ対応 */
-@media (min-width: 1025px) {
-  /* デスクトップ */
-  .hero-slider {
-      height: 500px;
-  }
-
-  .slide img {
-      height: 500px; /* デスクトップ時の高さを固定 */
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* タブレット */
-  .hero-slider {
-      height: 400px;
-  }
-
-  .slide img {
-      height: 400px; /* タブレット時の高さ */
-  }
-}
-@media (max-width: 767px) {
-  /* スマートフォン */
-  .hero-slider {
-      height: 250px;
-  }
-
-  .slide img {
-      height: 250px; /* スマートフォン時の高さ */
-  }
-}
-
-/* レスポンシブスタイル */
+/* レスポンシブ */
 @media (max-width: 768px) {
-  .nav-toggle {
-      display: block;
+  .products-grid {
+    flex-direction: column;
+    align-items: center;
   }
-
-  .nav-menu {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 80%;
-      height: 100%;
-      background: #0077C8;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
-      z-index: 1100;
-      padding-top: 5rem;
-  }
-
-  .nav-menu.open {
-      display: flex;
-      transform: translateX(0);
-  }
-
-  .menu-overlay.open {
-      display: block;
-  }
-
-  .nav-menu a {
-      color: white;
-      font-size: 1.2rem;
-  }
-
-  .nav-menu a:hover {
-      text-decoration: underline;
-  }
-
-  #home .hero-image,
-  #services .services-image,
-  #contact .contact-image,
-  #access .access-image,
-  #about .about-image,
-  #jobs .jobs-image {
-      max-width: 90%;
-  }
-
-  #access .map-container {
-    padding-top: 75%; /* Adjust aspect ratio for tablets */
-}
-}
-
-@media (max-width: 425px) {
-  header {
-      padding: 1rem;
-  }
-
-  .nav-menu a {
-      font-size: 0.9rem;
-  }
-
-  h1 {
-      font-size: 1.5rem;
-  }
-
-  h2 {
-      font-size: 1.2rem;
-  }
-
-  main {
-      padding: 1rem;
-  }
-
-  #access .map-container {
-    padding-top: 100%; /* Square aspect ratio for smaller screens */
-}
 }

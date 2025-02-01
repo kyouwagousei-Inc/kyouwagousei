@@ -1,153 +1,174 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>空調設備/フィルター製造会社 | 株式会社協和合成</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>株式会社協和合成 | 空調設備/フィルター製造</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav aria-label="グローバルナビ">
-            <a href="#" class="logo" aria-label="株式会社協和合成のロゴ">
-                <img src="img/logo.svg" alt="株式会社協和合成のロゴ" width="150" height="50">
-            </a>
-            <button class="nav-toggle" aria-label="メニューを開閉するボタン" aria-expanded="false">メニュー</button>
-            <div class="menu-overlay"></div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">ホーム</a></li>
-                <li><a href="product.html" class="nav-link">製品情報</a></li>
-                <li><a href="#services" class="nav-link">事業内容</a></li>
-                <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
-                <li><a href="about.html" class="nav-link">会社概要</a></li>
-                <li><a href="jobs.html" class="nav-link">求人情報</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ヘッダー（コンポーネント化済み） -->
+  <site-header></site-header>
 
-    <main>
-        <section id="home" class="hero" data-aos="fade-up">
-            <div class="hero-content">
-                <h1>空調設備のトータルソリューション</h1>
-                <p>長年にわたる知識と経験を基に、お客様に最適な空調環境を提供します。快適で効率的な空間づくりを目指します。</p>
-                <div class="cta">
-                    <a href="#services" class="cta-button">詳しく見る</a>
-                </div>
-                <div class="hero-slider">
-                    <div class="slides">
-                        <div class="slide active">
-                            <img src="img/hero-image.webp" alt="空調設備のイメージ1" width="100%">
-                        </div>
-                        <div class="slide">
-                            <img src="img/about.webp" alt="空調設備のイメージ2" width="100%">
-                        </div>
-                        <div class="slide">
-                            <img src="img/hero-image.webp" alt="空調設備のイメージ3" width="100%">
-                        </div>
-                        <div class="slide">
-                            <img src="img/about.webp" alt="空調設備のイメージ4" width="100%">
-                        </div>
-                    </div>
-                    <div class="slider-controls">
-                        <button class="prev">←</button>
-                        <button class="next">→</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="products" data-aos="fade-up">
-            <h2>製品情報</h2>
-            <p>当社は空調設備に最適なフィルターを製造しています。高性能で環境に優しい製品を提供することで、持続可能な社会に貢献します。</p>
-            <div class="products-list">
-                <article class="product">
-                    <h3>HEPAフィルター</h3>
-                    <p>微細な粒子を99.97%以上除去し、清潔な空気環境を実現します。</p>
-                    <img src="img/hepa-filter.jpg" alt="HEPAフィルターの画像" width="100%">
-                </article>
-                <article class="product">
-                    <h3>活性炭フィルター</h3>
-                    <p>臭いや有害物質を効果的に除去し、快適な空間を提供します。</p>
-                    <img src="img/charcoal-filter.jpg" alt="活性炭フィルターの画像" width="100%">
-                </article>
-                <article class="product">
-                    <h3>プレフィルター</h3>
-                    <p>大きな粒子や汚れをキャッチし、フィルター寿命を延ばします。</p>
-                    <img src="img/pre-filter.jpg" alt="プレフィルターの画像" width="100%">
-                </article>
-            </div>
-            <div class="cta">
-                <a href="product.html" class="cta-button">詳しく見る</a>
-            </div>
-        </section>
-        
+  <main>
+<!-- ヒーローセクション：スライダー機能実装 -->
+<section class="hero-section">
+    <div class="hero-slider">
+      <!-- スライド1 -->
+      <div class="slide active">
+        <img src="https://placehold.jp/1200x400.png?text=空調設備・フィルター製造" alt="空調設備・フィルター製造" class="hero-image">
+        <div class="hero-text">
+          <h1 class="hero-title">株式会社協和合成</h1>
+          <p class="hero-subtitle">空調設備・フィルター製造のプロフェッショナル</p>
+        </div>
+      </div>
+      <!-- スライド2（例） -->
+      <div class="slide">
+        <img src="https://placehold.jp/1200x400.png?text=製品の革新" alt="製品の革新" class="hero-image">
+        <div class="hero-text">
+          <h1 class="hero-title">製品の革新</h1>
+          <p class="hero-subtitle">最新技術による革新的な製品</p>
+        </div>
+      </div>
+      <!-- スライド3（例） -->
+      <div class="slide">
+        <img src="https://placehold.jp/1200x400.png?text=信頼と実績" alt="信頼と実績" class="hero-image">
+        <div class="hero-text">
+          <h1 class="hero-title">信頼と実績</h1>
+          <p class="hero-subtitle">長年の経験と実績に裏打ちされたサービス</p>
+        </div>
+      </div>
+    </div>
+    <!-- 前後のナビゲーション -->
+    <div class="slider-nav">
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
+    </div>
+  </section>
 
-        <section id="services" data-aos="fade-right">
-            <h2>事業内容</h2>
-            <ul>
-                <li>空調設備の設計</li>
-                <li>施工および保守</li>
-                <li>メンテナンスと改善提案</li>
-            </ul>
-            <div class="services-image">
-                <img src="img/services.webp" alt="事業内容のイメージ" width="100%">
-            </div>
-            <!-- <div class="cta">
-                <a href="#contact" class="cta-button">お問い合わせ</a>
-            </div> -->
-        </section>
+<!-- 製品情報セクション -->
+<section class="products-section">
+    <div class="container">
+      <h2 class="section-title">製品情報</h2>
+      
+      <!-- フィルタータブ -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-tab="product">製品から探す</button>
+        <button class="filter-tab" data-tab="use">利用場所から探す</button>
+        <button class="filter-tab" data-tab="feature">目的・特徴から探す</button>
+      </div>
+      
+      <!-- フィルターオプション -->
+      <div class="filter-options">
+        <!-- 製品から探す用のオプション -->
+        <ul class="filter-list" data-tab="product">
+          <li class="filter-option active" data-value="all">すべて</li>
+          <li class="filter-option" data-value="フィルター">フィルター</li>
+          <li class="filter-option" data-value="空調設備">空調設備</li>
+          <li class="filter-option" data-value="その他">その他</li>
+        </ul>
+        <!-- 利用場所から探す用のオプション -->
+        <ul class="filter-list" data-tab="use" style="display: none;">
+          <li class="filter-option active" data-value="all">すべて</li>
+          <li class="filter-option" data-value="住宅">住宅</li>
+          <li class="filter-option" data-value="オフィス">オフィス</li>
+          <li class="filter-option" data-value="工場">工場</li>
+        </ul>
+        <!-- 目的・特徴から探す用のオプション -->
+        <ul class="filter-list" data-tab="feature" style="display: none;">
+          <li class="filter-option active" data-value="all">すべて</li>
+          <li class="filter-option" data-value="省エネ">省エネ</li>
+          <li class="filter-option" data-value="高効率">高効率</li>
+          <li class="filter-option" data-value="最新型">最新型</li>
+        </ul>
+      </div>
+      
+      <!-- プロダクトグリッド -->
+      <div class="products-grid">
+        <article class="product-card" data-product="フィルター" data-use="工場" data-feature="高効率">
+          <img src="https://placehold.jp/300x200.png?text=製品1" alt="製品1" class="product-image">
+          <h3 class="product-title">製品1</h3>
+          <p class="product-description">高効率フィルターシステム</p>
+        </article>
+        <article class="product-card" data-product="空調設備" data-use="オフィス" data-feature="最新型">
+          <img src="https://placehold.jp/300x200.png?text=製品2" alt="製品2" class="product-image">
+          <h3 class="product-title">製品2</h3>
+          <p class="product-description">最新型空調設備</p>
+        </article>
+        <article class="product-card" data-product="フィルター" data-use="住宅" data-feature="省エネ">
+          <img src="https://placehold.jp/300x200.png?text=製品3" alt="製品3" class="product-image">
+          <h3 class="product-title">製品3</h3>
+          <p class="product-description">省エネシステム</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+<!-- 最新情報セクション -->
+<section class="news-section">
+    <div class="container">
+      <h2 class="section-title">最新情報</h2>
+      <ul class="news-list">
+        <li class="news-item active">
+          <time datetime="2025-01-25" class="news-date">2025.01.25</time>
+          <a href="#" class="news-link">新製品の発表について</a>
+        </li>
+        <li class="news-item">
+          <time datetime="2024-12-10" class="news-date">2024.12.10</time>
+          <a href="#" class="news-link">展示会出展のお知らせ</a>
+        </li>
+        <li class="news-item">
+          <time datetime="2024-11-05" class="news-date">2024.11.05</time>
+          <a href="#" class="news-link">工場の最新設備導入</a>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-        <section id="contact" data-aos="fade-left">
-            <h2>お問い合わせ</h2>
-            <p>空調設備に関するご相談は、メールまたは電話でお気軽にお問い合わせください。</p>
-            <table>
-                <tr>
-                    <th>電話番号</th>
-                    <td>03-1234-5678</td>
-                </tr>
-                <tr>
-                    <th>メール</th>
-                    <td><a href="mailto:info@kyowa-gousei.co.jp">info@kyowa-gousei.co.jp</a></td>
-                </tr>
-            </table>
-            <!-- <div class="contact-image">
-                <img src="img/contact.jpg" alt="お問い合わせのイメージ" width="100%">
-            </div> -->
-            <div class="cta">
-                <a href="#" class="cta-button">フォームで問い合わせ</a>
-            </div>
-        </section>
-        
-        <section id="about" data-aos="fade-right">
-            <h2>会社概要</h2>
-            <p>設立: 1961年11月<br>代表取締役: 佐久間 克己<br>従業員数: 10名</p>
-            <div class="about-image">
-            </div>
-            <div class="cta">
-                <a href="about.html" class="cta-button">会社情報を見る</a>
-            </div>
-        </section>
+  <!-- お問い合わせセクション -->
+<section class="contact-section">
+    <div class="container">
+      <h2 class="section-title">お問い合わせ</h2>
+      <p class="section-text">ご質問やご相談など、お気軽にお問い合わせください。</p>
+      <div class="contact-info">
+        <p class="contact-phone">TEL: 0339450526</p>
+        <p class="contact-email">Email: info@example.com</p>
+      </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="contact-name">お名前</label>
+          <input type="text" id="contact-name" name="name" placeholder="例）山田 太郎" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">メールアドレス</label>
+          <input type="email" id="contact-email" name="email" placeholder="example@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-phone">お電話番号</label>
+          <input type="tel" id="contact-phone" name="phone" placeholder="例）03-3945-0526">
+        </div>
+        <div class="form-group">
+          <label for="contact-message">お問い合わせ内容</label>
+          <textarea id="contact-message" name="message" rows="5" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </section>
+  
+  
+  </main>
 
-        <section id="jobs" data-aos="fade-left">
-            <h2>求人情報</h2>
-            <p>現在、製造および納品作業スタッフを募集しています。
-                埼玉県戸田市工場で空調フィルターの組立て製作、近県への納品作業を行います。未経験者歓迎！
-            </p>
-            <!-- <div class="jobs-image">
-                <img src="img/jobs.jpg" alt="求人情報のイメージ" width="100%">
-            </div> -->
-            <div class="cta">
-                <a href="jobs.html" class="cta-button">詳細はこちら</a>
-            </div>
-        </section>
-    </main>
+  <!-- フッター（コンポーネント化済み） -->
+  <site-footer></site-footer>
 
-    <footer>
-        <p>&copy; 2024 株式会社協和合成. All Rights Reserved.</p>
-    </footer>
+  <!-- コンポーネント用JSファイルの読み込み -->
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/filter.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/contact.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="js/script.js"></script>
 </body>
 </html>
