@@ -1,0 +1,67 @@
+/* 会社情報セクションのスタイル */
+.company-section {
+    padding: 4rem 0;
+    background-color: #fdfdfd;
+  }
+  
+  .company-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .company-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* 各拠点カード */
+  .company-location {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .company-location.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .company-location .location-title {
+    font-size: 1.8rem;
+    color: #0066cc;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 0.5rem;
+  }
+  
+  .company-location p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  /* Google Map のスタイル */
+  .company-location .map {
+    margin-top: 1.5rem;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  /* iframe をレスポンシブに */
+  .company-location .map iframe {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    display: block;
+  }
+  
