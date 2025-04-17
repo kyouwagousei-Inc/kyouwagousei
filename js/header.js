@@ -141,7 +141,6 @@ class SiteHeader extends HTMLElement {
               <li><a href="index.html">ホーム</a></li>
               <li><a href="company.html">会社情報</a></li>
               <li><a href="recruit.html">求人情報</a></li>
-              <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
           </nav>
           <div class="menu-toggle" id="menuToggle">
