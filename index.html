@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>株式会社協和合成 | 空調設備/フィルター製造</title>
+  <title>協和合成株式会社 | 空調設備/フィルター製造</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/products.css">
 </head>
@@ -19,7 +19,7 @@
       <div class="slide active">
         <img src="https://placehold.jp/1200x400.png?text=空調設備・フィルター製造" alt="空調設備・フィルター製造" class="hero-image">
         <div class="hero-text">
-          <h1 class="hero-title">株式会社協和合成</h1>
+          <h1 class="hero-title">協和合成株式会社</h1>
           <p class="hero-subtitle">空調設備・フィルター製造のプロフェッショナル</p>
         </div>
       </div>
@@ -47,153 +47,56 @@
     </div>
   </section>
 
-<!-- 製品情報セクション -->
+<!-- 製品情報セクション（改良版） -->
 <section class="products-section">
   <div class="container">
-    <h2 class="section-title">製品情報</h2>
-    
-    <!-- フィルタータブ -->
+    <h2 class="section-title">営業品目</h2>
+    <p class="section-lead">空気と環境を整える、協和合成の製品・サービスラインナップ</p>
+
+    <!-- カテゴリタブ -->
     <div class="filter-tabs">
-      <button class="filter-tab active" data-tab="product">製品から探す</button>
-      <button class="filter-tab" data-tab="use">利用場所から探す</button>
-      <button class="filter-tab" data-tab="feature">目的・特徴から探す</button>
+      <button class="filter-tab active" data-tab="filter">フィルター製品</button>
+      <button class="filter-tab" data-tab="equipment">設備・部材</button>
+      <button class="filter-tab" data-tab="services">サービス・測定</button>
     </div>
-    
-    <!-- フィルターオプション -->
-    <div class="filter-options">
-      <!-- 製品から探す用のオプション -->
-      <ul class="filter-list" data-tab="product">
-        <li class="filter-option active" data-value="all">すべて</li>
-        <li class="filter-option" data-value="フィルター">フィルター</li>
-        <li class="filter-option" data-value="空調設備">空調設備</li>
-        <li class="filter-option" data-value="その他">その他</li>
-      </ul>
-      <!-- 利用場所から探す用のオプション -->
-      <ul class="filter-list" data-tab="use" style="display: none;">
-        <li class="filter-option active" data-value="all">すべて</li>
-        <li class="filter-option" data-value="住宅">住宅</li>
-        <li class="filter-option" data-value="オフィス">オフィス</li>
-        <li class="filter-option" data-value="工場">工場</li>
-      </ul>
-      <!-- 目的・特徴から探す用のオプション -->
-      <ul class="filter-list" data-tab="feature" style="display: none;">
-        <li class="filter-option active" data-value="all">すべて</li>
-        <li class="filter-option" data-value="省エネ">省エネ</li>
-        <li class="filter-option" data-value="高効率">高効率</li>
-        <li class="filter-option" data-value="最新型">最新型</li>
+
+    <!-- カテゴリ別リスト -->
+    <div class="product-category" data-tab="filter">
+      <ul class="product-list">
+        <li>プレフィルター・中性能・高性能フィルター</li>
+        <li>OA機器・汎用機器用フィルター</li>
+        <li>脱臭フィルター・ガス吸着フィルター</li>
+        <li>オイルミストフィルター・射出成型フィルター</li>
+        <li>クリーンルーム・超高性能フィルター（HEPA・ULPA）</li>
       </ul>
     </div>
-    
-    <!-- プロダクトグリッド（20商品） -->
-    <div class="products-grid">
-      <article class="product-card" data-product="フィルター" data-use="工場" data-feature="高効率">
-        <img src="https://placehold.jp/300x200.png?text=製品1" alt="製品1" class="product-image">
-        <h3 class="product-title">製品1</h3>
-        <p class="product-description">高効率フィルターシステム</p>
-      </article>
-      <article class="product-card" data-product="空調設備" data-use="オフィス" data-feature="最新型">
-        <img src="https://placehold.jp/300x200.png?text=製品2" alt="製品2" class="product-image">
-        <h3 class="product-title">製品2</h3>
-        <p class="product-description">最新型空調設備</p>
-      </article>
-      <article class="product-card" data-product="フィルター" data-use="住宅" data-feature="省エネ">
-        <img src="https://placehold.jp/300x200.png?text=製品3" alt="製品3" class="product-image">
-        <h3 class="product-title">製品3</h3>
-        <p class="product-description">省エネシステム</p>
-      </article>
-      <article class="product-card" data-product="その他" data-use="工場" data-feature="最新型">
-        <img src="https://placehold.jp/300x200.png?text=製品4" alt="製品4" class="product-image">
-        <h3 class="product-title">製品4</h3>
-        <p class="product-description">製品4の説明</p>
-      </article>
-      <article class="product-card" data-product="フィルター" data-use="住宅" data-feature="高効率">
-        <img src="https://placehold.jp/300x200.png?text=製品5" alt="製品5" class="product-image">
-        <h3 class="product-title">製品5</h3>
-        <p class="product-description">製品5の説明</p>
-      </article>
-      <article class="product-card" data-product="空調設備" data-use="オフィス" data-feature="省エネ">
-        <img src="https://placehold.jp/300x200.png?text=製品6" alt="製品6" class="product-image">
-        <h3 class="product-title">製品6</h3>
-        <p class="product-description">製品6の説明</p>
-      </article>
-      <article class="product-card" data-product="フィルター" data-use="工場" data-feature="最新型">
-        <img src="https://placehold.jp/300x200.png?text=製品7" alt="製品7" class="product-image">
-        <h3 class="product-title">製品7</h3>
-        <p class="product-description">製品7の説明</p>
-      </article>
-      <article class="product-card" data-product="その他" data-use="住宅" data-feature="高効率">
-        <img src="https://placehold.jp/300x200.png?text=製品8" alt="製品8" class="product-image">
-        <h3 class="product-title">製品8</h3>
-        <p class="product-description">製品8の説明</p>
-      </article>
-      <article class="product-card" data-product="空調設備" data-use="工場" data-feature="省エネ">
-        <img src="https://placehold.jp/300x200.png?text=製品9" alt="製品9" class="product-image">
-        <h3 class="product-title">製品9</h3>
-        <p class="product-description">製品9の説明</p>
-      </article>
-      <article class="product-card" data-product="フィルター" data-use="オフィス" data-feature="高効率">
-        <img src="https://placehold.jp/300x200.png?text=製品10" alt="製品10" class="product-image">
-        <h3 class="product-title">製品10</h3>
-        <p class="product-description">製品10の説明</p>
-      </article>
-      <article class="product-card" data-product="その他" data-use="住宅" data-feature="最新型">
-        <img src="https://placehold.jp/300x200.png?text=製品11" alt="製品11" class="product-image">
-        <h3 class="product-title">製品11</h3>
-        <p class="product-description">製品11の説明</p>
-      </article>
-      <article class="product-card" data-product="フィルター" data-use="工場" data-feature="省エネ">
-        <img src="https://placehold.jp/300x200.png?text=製品12" alt="製品12" class="product-image">
-        <h3 class="product-title">製品12</h3>
-        <p class="product-description">製品12の説明</p>
-      </article>
-      <article class="product-card" data-product="空調設備" data-use="オフィス" data-feature="高効率">
-        <img src="https://placehold.jp/300x200.png?text=製品13" alt="製品13" class="product-image">
-        <h3 class="product-title">製品13</h3>
-        <p class="product-description">製品13の説明</p>
-      </article>
-      <article class="product-card" data-product="その他" data-use="工場" data-feature="最新型">
-        <img src="https://placehold.jp/300x200.png?text=製品14" alt="製品14" class="product-image">
-        <h3 class="product-title">製品14</h3>
-        <p class="product-description">製品14の説明</p>
-      </article>
-      <article class="product-card" data-product="フィルター" data-use="住宅" data-feature="省エネ">
-        <img src="https://placehold.jp/300x200.png?text=製品15" alt="製品15" class="product-image">
-        <h3 class="product-title">製品15</h3>
-        <p class="product-description">製品15の説明</p>
-      </article>
-      <article class="product-card" data-product="空調設備" data-use="工場" data-feature="高効率">
-        <img src="https://placehold.jp/300x200.png?text=製品16" alt="製品16" class="product-image">
-        <h3 class="product-title">製品16</h3>
-        <p class="product-description">製品16の説明</p>
-      </article>
-      <article class="product-card" data-product="その他" data-use="オフィス" data-feature="省エネ">
-        <img src="https://placehold.jp/300x200.png?text=製品17" alt="製品17" class="product-image">
-        <h3 class="product-title">製品17</h3>
-        <p class="product-description">製品17の説明</p>
-      </article>
-      <article class="product-card" data-product="フィルター" data-use="住宅" data-feature="最新型">
-        <img src="https://placehold.jp/300x200.png?text=製品18" alt="製品18" class="product-image">
-        <h3 class="product-title">製品18</h3>
-        <p class="product-description">製品18の説明</p>
-      </article>
-      <article class="product-card" data-product="空調設備" data-use="工場" data-feature="省エネ">
-        <img src="https://placehold.jp/300x200.png?text=製品19" alt="製品19" class="product-image">
-        <h3 class="product-title">製品19</h3>
-        <p class="product-description">製品19の説明</p>
-      </article>
-      <article class="product-card" data-product="その他" data-use="オフィス" data-feature="高効率">
-        <img src="https://placehold.jp/300x200.png?text=製品20" alt="製品20" class="product-image">
-        <h3 class="product-title">製品20</h3>
-        <p class="product-description">製品20の説明</p>
-      </article>
+
+    <div class="product-category" data-tab="equipment" style="display: none;">
+      <ul class="product-list">
+        <li>グリスフィルター・ステンレス排気フード</li>
+        <li>フィルターフレーム・ケーシング・チャンバーボックス</li>
+        <li>微差圧ゲージ・吹き出しグリル・吸込ガラリー</li>
+        <li>空気濾過材料・吸水濾材・液体濾過機</li>
+        <li>オイルストレーナー</li>
+      </ul>
     </div>
-    
-    <!-- もっと見るボタン -->
-    <div class="load-more-container">
-      <button class="load-more-btn">もっと見る</button>
+
+    <div class="product-category" data-tab="services" style="display: none;">
+      <ul class="product-list">
+        <li>フィルター交換・メンテナンス業務</li>
+        <li>空調機器の改修工事・設置対応</li>
+        <li><strong>クリーンルーム内の塵埃測定（清浄度チェック対応）</strong><br><span class="subtext">国家資格保持者による測定・レポート提出可</span></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <p>製品・サービスに関するご相談はお気軽にお問い合わせください。</p>
+      <a href="/contact" class="cta-button">お問い合わせはこちら</a>
     </div>
   </div>
 </section>
+
 
   
 <!-- 最新情報セクション -->
@@ -224,7 +127,7 @@
       <p class="section-text">ご質問やご相談など、お気軽にお問い合わせください。</p>
       <div class="contact-info">
         <p class="contact-phone">TEL: 0339450526</p>
-        <p class="contact-email">Email: info@example.com</p>
+        <p class="contact-email">Email: info@kyowagousei.co.jp</p>
       </div>
       <form class="contact-form">
         <div class="form-group">
