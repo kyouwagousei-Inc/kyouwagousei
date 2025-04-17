@@ -1,132 +1,162 @@
-/* 製品情報セクション専用スタイル */
+/* 製品情報セクション専用スタイル（スマホ最適化＋アイコン追加版） */
 .products-section {
-    padding: 4rem 0;
-    background-color: #fff;
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.products-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.products-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.products-section .section-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* フィルタータブ */
+.filter-tabs {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filter-tab {
+  background-color: #eee;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-width: 120px;
+}
+
+.filter-tab.active,
+.filter-tab:hover {
+  background-color: #ccc;
+}
+
+/* カテゴリリスト */
+.product-category {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.product-category.active {
+  display: block;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+  color: #444;
+  line-height: 2;
+}
+
+.product-list li {
+  padding-left: 1.8rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.product-list li::before {
+  content: "\f00c"; /* check icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: #0066cc;
+}
+
+.product-list .subtext {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.25rem;
+  padding-left: 1.8rem;
+}
+
+/* CTAボタン */
+.cta-box {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #0066cc;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #005bb5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .products-section {
+    padding: 2rem 1rem;
   }
-  
-  .products-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
+
   .products-section .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
+    font-size: 1.8rem;
   }
-  
-  /* フィルタータブ */
-  .filter-tabs {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .filter-tab {
-    background-color: #eee;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .filter-tab.active,
-  .filter-tab:hover {
-    background-color: #ddd;
-  }
-  
-  /* フィルターオプション */
-  .filter-options {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .filter-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-  }
-  
-  .filter-option {
-    display: inline-block;
-    margin: 0 0.5rem;
-    padding: 0.3rem 0.8rem;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .filter-option.active,
-  .filter-option:hover {
-    background-color: #ccc;
-  }
-  
-/* プロダクトグリッド：PC/タブレット（767px超）で4列 */
-.products-grid {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    width: 100%;
-  }
-  
-  @media (max-width: 768px) {
-    .products-grid {
-      /* スマホ: 2列 */
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  /* 各製品カード */
-  .product-card {
-    border: 1px solid #e0e0e0;
-    padding: 1rem;
-    text-align: center;
-    background-color: #fafafa;
-    transition: transform 0.3s ease;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .product-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
-  .product-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
-  .product-description {
+
+  .products-section .section-text {
     font-size: 0.95rem;
-    color: #555;
   }
-  
-  /* もっと見るボタン */
-  .load-more-container {
-    text-align: center;
-    margin-top: 2rem;
+
+  .filter-tab {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
-  
-  .load-more-btn {
-    padding: 0.75rem 2rem;
-    background-color: #0066cc;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
+
+  .product-list {
+    font-size: 0.95rem;
   }
-  
-  .load-more-btn:hover {
-    background-color: #005bb5;
+
+  .product-list li {
+    padding-left: 1.5rem;
   }
-  
+
+  .product-list .subtext {
+    font-size: 0.85rem;
+    padding-left: 1.5rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.5rem;
+  }
+}

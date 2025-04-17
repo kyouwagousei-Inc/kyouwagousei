@@ -8,28 +8,32 @@ class SiteHeader extends HTMLElement {
           display: block;
           font-family: "Helvetica Neue", Arial, sans-serif;
         }
-        /* ヘッダー全体 */
         .header {
           border-bottom: 1px solid #ccc;
         }
-        /* 上段：電話番号＆お問い合わせリンク */
         .header-top {
-          background-color: #f5f5f5;
-          padding: 0.5rem 1rem;
+          background-color: #f9f9f9;
+          padding: 0.75rem 1rem;
+          border-bottom: 1px solid #ddd;
+        }
+        .header-contact {
           display: flex;
-          justify-content: flex-end;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1.5rem;
           align-items: center;
-          font-size: 0.9rem;
         }
-        .header-top .contact-phone {
-          margin-right: 1rem;
-        }
-        .header-top .contact-link {
-          text-decoration: none;
+        .contact-link {
+          font-size: 0.95rem;
           color: #0066cc;
-          font-weight: bold;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
         }
-        /* 下段：ロゴ・ナビゲーション・ハンバーガーメニュー */
+        .contact-link:hover {
+          text-decoration: underline;
+        }
         .header-main {
           display: flex;
           justify-content: space-between;
@@ -57,7 +61,6 @@ class SiteHeader extends HTMLElement {
           color: #333;
           font-weight: bold;
         }
-        /* ハンバーガーメニュー */
         .menu-toggle {
           display: none;
           width: 25px;
@@ -73,7 +76,6 @@ class SiteHeader extends HTMLElement {
           background: #333;
           transition: 0.4s;
         }
-        /* 各 span の初期配置 */
         .menu-toggle span:nth-child(1) {
           top: 4px;
         }
@@ -83,7 +85,6 @@ class SiteHeader extends HTMLElement {
         .menu-toggle span:nth-child(3) {
           top: 18px;
         }
-        /* アクティブ時の変形（位置は固定） */
         .menu-toggle.active span:nth-child(1) {
           top: 11px;
           transform: rotate(45deg);
@@ -95,7 +96,6 @@ class SiteHeader extends HTMLElement {
           top: 11px;
           transform: rotate(-45deg);
         }
-        /* レスポンシブ対応 */
         @media (max-width: 768px) {
           .header-nav {
             width: 100%;
@@ -119,12 +119,17 @@ class SiteHeader extends HTMLElement {
         }
       </style>
       <header class="header">
-        <!-- 上段：電話番号とお問い合わせリンク -->
         <div class="header-top">
-          <span class="contact-phone">TEL: 0339450526</span>
-          <a href="contact.html" class="contact-link">お問い合わせ</a>
+          <div class="header-contact">
+            <a href="tel:0339450526" class="contact-link">
+              📞 お電話でのお問い合わせ：<strong>03-3945-0526</strong>
+            </a>
+            <a href="mailto:info@kyouwagousei.co.jp?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6&body=%E4%BB%A5%E4%B8%8B%E3%81%AE%E5%86%85%E5%AE%B9%E3%82%92%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%BE%E3%81%99%E3%81%A8%E5%B9%B8%E3%81%84%E3%81%A7%E3%81%99%E3%80%82%0A%0A%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%E2%96%A0%20%E8%B2%B4%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E2%96%A0%20%E3%81%94%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%EF%BC%9A%0A%E2%96%A0%20%E3%81%8A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%EF%BC%9A%0A%E2%96%A0%20%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0A%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%0A%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%A0%E3%81%91%E8%A9%B3%E3%81%97%E3%81%8F%E3%81%94%E8%A8%98%E5%85%A5%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%BE%E3%81%99%E3%81%A8%E3%80%81%E3%82%B9%E3%83%A0%E3%83%BC%E3%82%BA%E3%81%AB%E3%81%94%E6%A1%88%E5%86%85%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82"
+               class="contact-link">
+              📧 メールでのお問い合わせ：<strong>info@kyouwagousei.co.jp</strong>
+            </a>
+          </div>
         </div>
-        <!-- 下段：ロゴ・ナビゲーション・ハンバーガーメニュー -->
         <div class="header-main">
           <div class="header-logo">
             <a href="index.html">
@@ -135,7 +140,6 @@ class SiteHeader extends HTMLElement {
             <ul>
               <li><a href="index.html">ホーム</a></li>
               <li><a href="company.html">会社情報</a></li>
-              <li><a href="products.html">製品情報</a></li>
               <li><a href="recruit.html">求人情報</a></li>
               <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
@@ -149,7 +153,6 @@ class SiteHeader extends HTMLElement {
       </header>
     `;
 
-    // イベントハンドラーのバインド
     this._toggleMenu = this._toggleMenu.bind(this);
     this._handleOutsideClick = this._handleOutsideClick.bind(this);
     this._closeMenu = this._closeMenu.bind(this);
@@ -159,13 +162,11 @@ class SiteHeader extends HTMLElement {
     const menuToggle = this.shadowRoot.getElementById('menuToggle');
     menuToggle.addEventListener('click', this._toggleMenu);
 
-    // ナビゲーションリンククリック時にメニューを閉じる
     const navLinks = this.shadowRoot.querySelectorAll('.header-nav a');
     navLinks.forEach(link => {
       link.addEventListener('click', this._closeMenu);
     });
 
-    // コンポーネント外クリックでメニューを閉じる
     document.addEventListener('click', this._handleOutsideClick);
   }
 
