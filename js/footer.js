@@ -22,7 +22,7 @@ class SiteFooter extends HTMLElement {
         </style>
         <footer class="site-footer">
           <div class="container">
-            <p class="footer-text">© 2025 株式会社協和合成. All Rights Reserved.</p>
+            <p class="footer-text">© 2025 協和合成株式会社. All Rights Reserved.</p>
           </div>
         </footer>
       `;
