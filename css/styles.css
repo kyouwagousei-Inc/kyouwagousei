@@ -68,6 +68,12 @@ header.header {
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
+.hero-history {
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
 
 /* 前後ナビゲーション（ボタン）の設定 */
 .slider-nav {
