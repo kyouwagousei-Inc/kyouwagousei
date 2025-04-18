@@ -8,14 +8,17 @@ class SiteHeader extends HTMLElement {
           display: block;
           font-family: "Helvetica Neue", Arial, sans-serif;
         }
+
         .header {
           border-bottom: 1px solid #ccc;
         }
+
         .header-top {
           background-color: #f9f9f9;
           padding: 0.75rem 1rem;
           border-bottom: 1px solid #ddd;
         }
+
         .header-contact {
           display: flex;
           flex-wrap: wrap;
@@ -23,6 +26,7 @@ class SiteHeader extends HTMLElement {
           gap: 1.5rem;
           align-items: center;
         }
+
         .contact-link {
           font-size: 0.95rem;
           color: #0066cc;
@@ -31,9 +35,11 @@ class SiteHeader extends HTMLElement {
           align-items: center;
           gap: 0.5rem;
         }
+
         .contact-link:hover {
           text-decoration: underline;
         }
+
         .header-main {
           display: flex;
           justify-content: space-between;
@@ -41,100 +47,190 @@ class SiteHeader extends HTMLElement {
           padding: 1rem;
           flex-wrap: wrap;
         }
+
+        .header-logo {
+          display: flex;
+          align-items: flex-start;
+        }
+
         .header-logo img {
           max-width: 250px;
+          height: auto;
         }
+
+        .header-tagline {
+          font-size: 0.9rem;
+          color: #0066cc;
+          margin-top: 0.25rem;
+          font-weight: bold;
+        }
+
         .header-nav {
           display: flex;
         }
+
         .header-nav ul {
           list-style: none;
           display: flex;
           margin: 0;
           padding: 0;
         }
+
         .header-nav li {
           margin-left: 2rem;
         }
+
         .header-nav a {
           text-decoration: none;
-          color: #333;
+          color: #203764;
           font-weight: bold;
         }
+
         .menu-toggle {
           display: none;
-          width: 25px;
-          height: 25px;
+          width: 30px;
+          height: 30px;
           position: relative;
           cursor: pointer;
+          z-index: 999;
         }
+
         .menu-toggle span {
           position: absolute;
           left: 0;
           width: 100%;
           height: 3px;
-          background: #333;
+          background: #203764;
           transition: 0.4s;
         }
+
         .menu-toggle span:nth-child(1) {
           top: 4px;
         }
+
         .menu-toggle span:nth-child(2) {
           top: 11px;
         }
+
         .menu-toggle span:nth-child(3) {
           top: 18px;
         }
+
         .menu-toggle.active span:nth-child(1) {
           top: 11px;
           transform: rotate(45deg);
         }
+
         .menu-toggle.active span:nth-child(2) {
           opacity: 0;
         }
+
         .menu-toggle.active span:nth-child(3) {
           top: 11px;
           transform: rotate(-45deg);
         }
+
         @media (max-width: 768px) {
+          .header-main {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+          }
+
+          .header-logo {
+            flex-direction: column;
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            width: 100%;
+          }
+
+          .header-tagline {
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 0rem;
+          }
+
+          .menu-toggle {
+            display: block;
+          }
+
           .header-nav {
             width: 100%;
             display: none;
             flex-direction: column;
+            background-color: #fff;
+            padding: 1rem 0;
+            position: absolute;
+            top: calc(100% + 0px);
+            left: 0;
+            z-index: 9999;
+            border-top: 1px solid #ccc;
           }
+
           .header-nav.active {
-            display: flex;
+            display: flex !important;
           }
+
           .header-nav ul {
+            display: flex;
             flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+          }
+
+          .header-nav li {
+            list-style: none;
+            margin: 0;
+            text-align: center;
             width: 100%;
           }
-          .header-nav li {
-            margin: 1rem 0;
-            text-align: center;
-          }
-          .menu-toggle {
+
+          .header-nav a {
             display: block;
+            padding: 0.75rem 1rem;
+            color: #003366;
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+          }
+
+          .header-nav a:hover {
+            background-color: #f3f3f3;
+          }
+
+          .header-top {
+            padding: 0.5rem;
+          }
+
+          .header-contact {
+            flex-direction: column;
+            gap: 0.25rem;
+          }
+
+          .contact-link {
+            font-size: 0.7rem;
+            text-align: center;
           }
         }
       </style>
       <header class="header">
         <div class="header-top">
           <div class="header-contact">
-            <a href="tel:0339450526" class="contact-link">
-              📞 お電話でのお問い合わせ：<strong>03-3945-0526</strong>
-            </a>
-            <a href="mailto:info@kyouwagousei.co.jp?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6&body=%E4%BB%A5%E4%B8%8B%E3%81%AE%E5%86%85%E5%AE%B9%E3%82%92%E3%81%94%E8%A8%98%E5%85%A5%E3%81%AE%E3%81%86%E3%81%88%E3%80%81%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%BE%E3%81%99%E3%81%A8%E5%B9%B8%E3%81%84%E3%81%A7%E3%81%99%E3%80%82%0A%0A%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%E2%96%A0%20%E8%B2%B4%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E2%96%A0%20%E3%81%94%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D%EF%BC%9A%0A%E2%96%A0%20%E3%81%8A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%EF%BC%9A%0A%E2%96%A0%20%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0A%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%0A%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%A0%E3%81%91%E8%A9%B3%E3%81%97%E3%81%8F%E3%81%94%E8%A8%98%E5%85%A5%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%81%BE%E3%81%99%E3%81%A8%E3%80%81%E3%82%B9%E3%83%A0%E3%83%BC%E3%82%BA%E3%81%AB%E3%81%94%E6%A1%88%E5%86%85%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82"
-               class="contact-link">
-              📧 メールでのお問い合わせ：<strong>info@kyouwagousei.co.jp</strong>
-            </a>
+            <a href="tel:0339450526" class="contact-link">📞 お電話でのお問い合わせ：<strong>03-3945-0526</strong></a>
+            <a href="mailto:info@kyouwagousei.co.jp" class="contact-link">📧 メールでのお問い合わせ：<strong>info@kyouwagousei.co.jp</strong></a>
           </div>
         </div>
         <div class="header-main">
           <div class="header-logo">
             <a href="index.html">
-              <img src="https://placehold.jp/250x50.png?text=協和合成" alt="協和合成ロゴ">
+              <img src="img/logo.png" alt="協和合成ロゴ">
             </a>
+            <div class="header-tagline" data-year="1961">創業1961年・</div>
           </div>
           <nav class="header-nav" id="nav">
             <ul>
@@ -155,6 +251,8 @@ class SiteHeader extends HTMLElement {
     this._toggleMenu = this._toggleMenu.bind(this);
     this._handleOutsideClick = this._handleOutsideClick.bind(this);
     this._closeMenu = this._closeMenu.bind(this);
+    // コンストラクタ末尾に追加
+    this._updateTagline();
   }
 
   connectedCallback() {
@@ -203,6 +301,16 @@ class SiteHeader extends HTMLElement {
     if (!path.includes(this)) {
       this._closeMenu();
     }
+  }
+  _updateTagline() {
+    const tagline = this.shadowRoot.querySelector('.header-tagline');
+    if (!tagline) return;
+
+    const baseYear = parseInt(tagline.getAttribute('data-year'), 10);
+    const currentYear = new Date().getFullYear();
+    const years = currentYear - baseYear;
+
+    tagline.textContent = `創業${baseYear}年・${years}年以上の実績`;
   }
 }
 

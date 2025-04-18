@@ -1,67 +1,143 @@
-/* 会社情報セクションのスタイル */
 .company-section {
-    padding: 4rem 0;
-    background-color: #fdfdfd;
+  padding: 4rem 0;
+  background-color: #fdfdfd;
+}
+
+.company-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.company-section .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #203764;
+}
+
+/* 各拠点カード */
+.company-location {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.company-location.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.location-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #0066cc;
+  border-left: 4px solid #0066cc;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.company-info {
+  flex: 1 1 40%;
+}
+
+.company-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.company-map {
+  flex: 1 1 55%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.company-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: none;
+  display: block;
+  border-radius: 8px;
+}
+
+/* スマホ最適化 */
+@media (max-width: 768px) {
+  .company-section {
+    padding: 2rem 1rem;
+    width: 100%;
   }
-  
-  .company-section .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+
+  .container {
+    max-width: 100%;
+    padding: 0 0!important;
   }
-  
+
   .company-section .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
-    text-align: center;
-    color: #333;
   }
-  
-  /* 各拠点カード */
+
   .company-location {
-    margin-bottom: 3rem;
-    padding: 1.5rem;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #fff;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
   }
-  
-  .company-location.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .company-location .location-title {
-    font-size: 1.8rem;
-    color: #0066cc;
+
+  .location-title {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #0066cc;
-    padding-bottom: 0.5rem;
   }
-  
-  .company-location p {
+
+  .company-info p {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 0.5rem;
-    color: #555;
+    margin-bottom: 0.75rem;
   }
-  
-  /* Google Map のスタイル */
-  .company-location .map {
-    margin-top: 1.5rem;
-    overflow: hidden;
-    border-radius: 8px;
+
+  .company-info p strong {
+    margin-right: 0.5rem;
+    color: #203764;
+    font-weight: 600;
   }
-  
-  /* iframe をレスポンシブに */
-  .company-location .map iframe {
+
+  .company-map {
+    margin-top: 1rem;
+  }
+
+  .company-map iframe {
     width: 100%;
     height: auto;
-    min-height: 300px;
-    display: block;
+    min-height: 240px;
+    border-radius: 8px;
   }
-  
+}
+
+
+@media (max-width: 480px) {
+  .company-section .section-title {
+    font-size: 1.7rem;
+  }
+
+  .location-title {
+    font-size: 1.2rem;
+  }
+
+  .company-info p {
+    font-size: 0.9rem;
+  }
+}
