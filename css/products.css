@@ -1,22 +1,20 @@
-/* 製品情報セクション専用スタイル（スマホ最適化＋アイコン追加版＋営業文句＋共感リード＋対応フロー） */
+/* ==============================
+   製品情報セクション（共通）
+============================== */
 .products-section {
   padding: 4rem 0;
   background-color: #fff;
 }
-
 .products-section .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
-
 .products-section .section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #203764;
 }
-
 .products-section .section-text {
   text-align: center;
   font-size: 1rem;
@@ -27,83 +25,94 @@
   margin-right: auto;
 }
 
-/* フィルタータブ */
+/* ==============================
+   タブスタイル
+============================== */
 .filter-tabs {
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
-
 .filter-tab {
-  background-color: #eee;
+  padding: 0.75rem 1.5rem;
+  background-color: #e6f0ff;
   border: none;
-  padding: 0.6rem 1.2rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
   border-radius: 4px;
   font-size: 1rem;
-  min-width: 120px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-
-.filter-tab.active,
+.filter-tab.active {
+  background-color: #0066cc;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transform: scale(1.03);
+}
 .filter-tab:hover {
   background-color: #ccc;
 }
 
+/* ==============================
+   カテゴリ表示
+============================== */
 .product-category {
   display: none;
   animation: fadeIn 0.3s ease-in-out;
+  text-align: center;
 }
-
 .product-category.active {
   display: block;
 }
-
-.product-list {
+.product-list,
+.pain-points {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  padding-left: 0;
   list-style: none;
-  padding: 0;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
+  text-align: left;
   font-size: 1rem;
-  color: #444;
-  line-height: 2;
+  line-height: 1.8;
+  color: #333;
 }
-
-.product-list li {
-  padding-left: 1.8rem;
+.product-list li,
+.pain-points li {
   position: relative;
+  padding-left: 2rem;
   margin-bottom: 0.5rem;
 }
-
-.product-list li::before {
+.product-list li::before,
+.pain-points li::before {
   content: "\f00c";
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-weight: bold;
   position: absolute;
   left: 0;
-  top: 0.1rem;
-  color: #0066cc;
+  top: 0;
+  color: #007acc;
 }
-
 .product-list .subtext {
   display: block;
   font-size: 0.9rem;
   color: #777;
   margin-top: 0.25rem;
-  padding-left: 1.8rem;
+  padding-left: 0;
 }
 
+/* ==============================
+   CTAボタン
+============================== */
 .cta-box {
   text-align: center;
   margin-top: 2.5rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 2rem;
 }
-
 .cta-button {
   display: inline-block;
   background-color: #0066cc;
@@ -115,11 +124,13 @@
   transition: background 0.3s ease;
   margin: 0.5rem;
 }
-
 .cta-button:hover {
   background-color: #005bb5;
 }
 
+/* ==============================
+   ギャラリー
+============================== */
 .gallery-caption {
   text-align: center;
   font-size: 1rem;
@@ -127,7 +138,6 @@
   margin: 1.5rem auto 0.5rem;
   max-width: 800px;
 }
-
 .product-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -136,25 +146,26 @@
   margin: 2.5rem auto 2rem;
   max-width: 1000px;
 }
-
 .product-gallery img {
-  width: 300px;
+  width: 600px;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
 }
-
 .product-gallery img:hover {
   transform: scale(1.05);
 }
 
+/* ==============================
+   営業文句エリア
+============================== */
 .sales-message {
   max-width: 800px;
   margin: 3rem auto 2rem;
   padding: 1.5rem 1rem;
-  background: #fffbe6; 
+  background: #fffbe6;
   border-left: 5px solid #0066cc;
   border-radius: 8px;
   text-align: center;
@@ -163,13 +174,15 @@
   color: #333;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
-
 .sales-message strong {
   color: #d10000;
   font-weight: bold;
   font-size: 1.1rem;
 }
 
+/* ==============================
+   共感リード
+============================== */
 .highlight-lead {
   text-align: center;
   font-size: 1.1rem;
@@ -180,30 +193,9 @@
   line-height: 1.6;
 }
 
-.pain-points {
-  max-width: 800px;
-  margin: 1.5rem auto 2rem;
-  padding-left: 0;
-  list-style: none;
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.8;
-}
-
-.pain-points li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.pain-points .icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #007acc;
-  font-weight: bold;
-}
-
+/* ==============================
+   対応フロー
+============================== */
 .flow-section {
   max-width: 800px;
   margin: 3rem auto 2rem;
@@ -213,14 +205,12 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   text-align: center;
 }
-
 .flow-title {
   font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #333;
 }
-
 .flow-steps {
   list-style: none;
   padding-left: 0;
@@ -231,8 +221,8 @@
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
+  counter-reset: step;
 }
-
 .flow-steps li {
   display: flex;
   align-items: flex-start;
@@ -242,7 +232,6 @@
   position: relative;
   padding-left: 3rem;
 }
-
 .flow-steps li::before {
   content: counter(step, decimal-leading-zero);
   counter-increment: step;
@@ -262,79 +251,97 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.flow-steps {
-  counter-reset: step;
-}
-
-
+/* ==============================
+   アニメーション
+============================== */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
+/* ==============================
+   レスポンシブ対応
+============================== */
 @media (max-width: 768px) {
   .products-section {
     padding: 2rem 1rem;
   }
-
   .products-section .section-title {
     font-size: 1.8rem;
   }
-
   .products-section .section-text {
     font-size: 0.95rem;
   }
-
+  .filter-tabs {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
   .filter-tab {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
   }
-
-  .product-list {
+  .product-list,
+  .pain-points {
     font-size: 0.95rem;
+    line-height: 1.7;
+    padding-left: 1rem;
   }
-
-  .product-list li {
+  .product-list li,
+  .pain-points li {
     padding-left: 1.5rem;
   }
-
   .product-list .subtext {
     font-size: 0.85rem;
     padding-left: 1.5rem;
   }
-
-  .cta-button {
-    font-size: 0.95rem;
-    padding: 0.6rem 1.5rem;
-  }
-
   .product-gallery img {
     width: 90%;
   }
-
-  .flow-steps {
-    align-items: flex-start;
-    text-align: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem auto;
+    display: block;
+    text-align: center;
   }
-
   .flow-section {
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
   }
-
   .flow-title {
     font-size: 1.1rem;
   }
-
-  .flow-steps li {
-    font-size: 1rem;
-    padding-left: 2.5rem;
+  .flow-steps {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-
+  .flow-steps li {
+    font-size: 0.9rem;
+    padding-left: 2rem;
+  }
   .flow-steps li::before {
     font-size: 0.9rem;
     width: 1.6rem;
     height: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-tab {
+    font-size: 0.95rem;
+    padding: 0.85rem;
+  }
+  .product-list,
+  .pain-points {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .sales-message {
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background-color: #fffce0;
   }
 }
