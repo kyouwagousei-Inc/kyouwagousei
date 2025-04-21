@@ -129,35 +129,62 @@ section {
   margin: 0 auto;
 }
 
-/* 最新情報セクション */
+/* === 最新情報セクション === */
 .news-section {
-  position: relative;
-  overflow: hidden;
-  /* 最低限の高さを設定（必要に応じて調整） */
-  min-height: 50px;
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+
+.news-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.news-section .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #203764;
 }
 
 .news-list {
-  position: relative;
   list-style: none;
-  margin: 0;
   padding: 0;
-  height: 50px; /* 表示する高さに合わせて調整 */
+  margin: 0;
 }
 
 .news-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  border-left: 4px solid #0066cc;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
 }
 
-.news-item.active {
-  opacity: 1;
-  position: relative;
+.news-date {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #555;
+  min-width: 100px;
+  flex-shrink: 0;
 }
+
+.news-link {
+  font-size: 1rem;
+  color: #0066cc;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+
 
 /* お問い合わせセクション */
 .contact-section {
