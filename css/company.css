@@ -141,3 +141,34 @@
     font-size: 0.9rem;
   }
 }
+
+
+.company-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.company-images picture {
+  width: 100%;
+}
+.company-images img {
+  width: 100%;
+  aspect-ratio: 4 / 3;    /* 比率を揃えて */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.company-images picture {
+  cursor: pointer;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform .2s;
+}
+.company-images picture:hover,
+.company-images picture:focus {
+  transform: scale(1.03);
+}
+
+

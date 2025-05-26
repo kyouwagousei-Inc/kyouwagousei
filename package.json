@@ -1,0 +1,23 @@
+{
+  "name": "kyouwagousei",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://kyouwagousei.tm@github.com/kyouwagousei-Inc/kyouwagousei.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyouwagousei-Inc/kyouwagousei/issues"
+  },
+  "homepage": "https://github.com/kyouwagousei-Inc/kyouwagousei#readme",
+  "devDependencies": {
+    "sharp": "^0.34.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "resize-images": "node scripts/resize-images.js"
+  }
+}
