@@ -51,7 +51,7 @@ class SiteFooter extends HTMLElement {
           <div class="footer-contact">
             <span>Tel: 03-3945-0526</span>
             <span>Fax: 03-3947-1990</span>
-            <span>営業時間: 9:00〜17:30（土日祝除く）</span>
+            <span>営業時間: 9:00〜17:00（土日祝除く）</span>
           </div>
           <p class="footer-text">© 2025 協和合成株式会社. All Rights Reserved.</p>
         </div>
