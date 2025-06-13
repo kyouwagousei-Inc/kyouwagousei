@@ -1,0 +1,17 @@
+{
+  "Name": "info-receive-rule",
+  "Enabled": true,
+  "TlsPolicy": "Optional",
+  "Recipients": [
+    "info@7okenm.com"
+  ],
+  "Actions": [
+    {
+      "S3Action": {
+        "BucketName": "ses-inbound-emails-7okenm",
+        "ObjectKeyPrefix": "emails/"
+      }
+    }
+  ],
+  "ScanEnabled": true
+}
