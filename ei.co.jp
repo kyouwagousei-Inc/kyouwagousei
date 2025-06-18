@@ -1,0 +1,53 @@
+{
+    "ResourceRecordSets": [
+        {
+            "Name": "kyouwagousei.co.jp.",
+            "Type": "NS",
+            "TTL": 172800,
+            "ResourceRecords": [
+                {
+                    "Value": "ns-542.awsdns-03.net."
+                },
+                {
+                    "Value": "ns-366.awsdns-45.com."
+                },
+                {
+                    "Value": "ns-1819.awsdns-35.co.uk."
+                },
+                {
+                    "Value": "ns-1464.awsdns-55.org."
+                }
+            ]
+        },
+        {
+            "Name": "kyouwagousei.co.jp.",
+            "Type": "SOA",
+            "TTL": 900,
+            "ResourceRecords": [
+                {
+                    "Value": "ns-542.awsdns-03.net. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"
+                }
+            ]
+        },
+        {
+            "Name": "_fd92632c12eb1bd1bbe6a8bcbf51a6d8.kyouwagousei.co.jp.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_b4234aba70713a991ba5a1f0ec09bcdc.xlfgrmvvlj.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "_f7d30ef380e7ca5fcab5b00cc56904d0.www.kyouwagousei.co.jp.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_daf6008acfe1c2cf36ac82a4ce79404a.xlfgrmvvlj.acm-validations.aws."
+                }
+            ]
+        }
+    ]
+}
