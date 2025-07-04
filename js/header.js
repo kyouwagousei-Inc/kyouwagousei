@@ -235,7 +235,7 @@ class SiteHeader extends HTMLElement {
           <nav class="header-nav" id="nav">
             <ul>
               <li><a href="/index.html">ホーム</a></li>
-              <li><a href="/company.html">会社情報</a></li>
+              <li><a href="/company.html">会社概要</a></li>
               <li><a href="/recruit.html">求人情報</a></li>
             </ul>
           </nav>

@@ -1,94 +1,107 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>会社情報 | 協和合成株式会社</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/company.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>会社概要 | 協和合成株式会社</title>
+  <link rel="stylesheet" href="css/company.css" />
 </head>
 <body>
-  <!-- ヘッダーコンポーネント -->
-  <gtm-tag gtm-id="GTM-5V7G62JJ"></gtm-tag>
+  <!-- ヘッダー -->
   <site-header></site-header>
 
   <main>
     <section class="company-section">
       <div class="container">
-        <h2 class="section-title">会社情報</h2>
-
-        <!-- 本社情報 -->
-        <article class="company-location">
-        <div class="company-info">
-          <h3 class="location-title">本社</h3>
-          <p><strong>名称:</strong> 協和合成株式会社</p>
-          <p><strong>住所:</strong> 〒113-0021 <br>東京都文京区本駒込６丁目５−３ ビューネ本駒込ビル 8階</p>
-          <p><strong>電話番号:</strong> 03-3945-0526</p>
-          <p><strong>設立:</strong> 1961年 11月1日</p>
-          <p><strong>代表者:</strong> 代表取締役　佐久間 克己</p>
-          <p><strong>資本金:</strong> 10 百万円</p>
-          <p><strong>最寄り駅:</strong> 巣鴨駅、千石駅</p>
-          <p><strong>最寄り駅からの距離:</strong> 千石駅から直線距離で383m</p>
-        </div>
-        <!-- 本社 Google Map -->
-        <div class="company-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415933.7448307576!2d139.38375422787007!3d35.4676070483978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188da2b33a052d%3A0xa1f7fd8501cd738c!2z5Y2U5ZKM5ZCI5oiQ44ix!5e0!3m2!1sja!2sjp!4v1738407486142!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        </article>
-
-        <!-- 戸田工場情報 -->
-        <article class="company-location">
-          <div class="company-info">
-          <h3 class="location-title">戸田工場</h3>
-          <p><strong>名称:</strong> 協和合成株式会社　戸田工場</p>
-          <p><strong>住所:</strong> 〒335-0032 <br>埼玉県戸田市美女木東１丁目４−１９</p>
-        </div>
-            <!-- 戸田工場 Google Map -->
-            <div class="company-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415933.7448307576!2d139.38375422787007!3d35.4676070483978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018eaff784b3c9f%3A0x4128088989692751!2z5Y2U5ZKM5ZCI5oiQ77yI5qCq77yJIOaIuOeUsOW3peWgtA!5e0!3m2!1sja!2sjp!4v1738407487083!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-            <!-- 戸田工場 外観ギャラリー -->
-             <div class="company-images">
-              <picture>
-  <source type="image/webp" srcset="img/optimized/factory-1024.webp 1024w, img/optimized/factory-768.webp 768w">
-  <source media="(min-width:1024px)" srcset="img/optimized/factory-1920.jpg 1920w">
-  <source media="(min-width:768px)"  srcset="img/optimized/factory-1024.jpg 1024w">
-  <img
-    src="/img/optimized/factory-480.jpg"
-    srcset="img/optimized/factory-480.jpg 480w"
-    sizes="(min-width:1024px) 50vw, (min-width:768px) 50vw, 100vw"
-    alt="戸田工場外観"
-    loading="lazy"
-  >
-</picture>
-              <picture>
-  <source type="image/webp" srcset="img/optimized/factory2-1024.webp 1024w, img/optimized/factory2-768.webp 768w">
-  <source media="(min-width:1024px)" srcset="img/optimized/factory2-1920.jpg 1920w">
-  <source media="(min-width:768px)"  srcset="img/optimized/factory2-1024.jpg 1024w">
-  <img
-    src="img/optimized/factory2-480.jpg"
-    srcset="img/optimized/factory2-480.jpg 480w"
-    sizes="(min-width:1024px) 50vw, (min-width:768px) 50vw, 100vw"
-    alt="戸田工場外観2"
-    loading="lazy"
-  >
-</picture>
-            </div>
-        </article>
+        <h2 class="section-title">会社概要</h2>
+        <table class="company-table">
+          <tbody>
+            <tr>
+              <th>会社名</th>
+              <td>協和合成株式会社</td>
+            </tr>
+            <tr>
+              <th>設立</th>
+              <td>1961年11月1日</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>代表取締役 佐久間 克己</td>
+            </tr>
+            <tr>
+              <th>資本金</th>
+              <td>10百万円</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>
+                〒113-0021<br />
+                東京都文京区本駒込６丁目５−３ ビューネ本駒込ビル 8階
+              </td>
+            </tr>
+            <tr>
+              <th>電話番号</th>
+              <td>03-3945-0526</td>
+            </tr>
+            <tr>
+              <th>事業内容</th>
+              <td>
+                <ul>
+                  <li>空調設備関連機器の設計・製造・販売</li>
+                  <li>エアーフィルター全般の製造・販売</li>
+                  <li>クリーンルーム関連装置の設計・施工、保守・メンテナンス業務</li>
+                </ul></td>
+            </tr>
+            <tr>
+              <th>主要拠点</th>
+              <td>
+                <ul>
+                  <li>戸田工場（埼玉県戸田市美女木東１丁目４−１９）</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
+
+    <!-- maps -->
+    <section class="map-section">
+      <div class="container">
+        <h3 class="map-title">本社アクセスマップ</h3>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415933.7448307576!2d139.38375422787007!3d35.4676070483978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188da2b33a052d%3A0xa1f7fd8501cd738c!2z5Y2U5ZKM5ZCI5oiQ44ix!5e0!3m2!1sja!2sjp!4v1738407486142!5m2!1sja!2sjp" loading="lazy"></iframe>
+          <p class="caption">※地図は拡大・縮小してご確認ください</p>
+        </div>
+      </div>
+    </section>
+
+<section class="map-section">
+  <div class="container">
+    <h3 class="map-title">戸田工場アクセスマップ</h3>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415933.7448307576!2d139.38375422787007!3d35.4676070483978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018eaff784b3c9f%3A0x4128088989692751!2z5Y2U5ZKM5ZCI5oiQ77yI5qCq77yJIOaIuOeUsOW3peWgtA!5e0!3m2!1sja!2sjp!4v1738407487083!5m2!1sja!2sjp" loading="lazy"></iframe>
+      <p class="caption">※地図は拡大・縮小してご確認ください</p>
+    </div>
+    <div class="company-images">
+      <picture>
+        <source type="image/webp" srcset="img/optimized/factory-1024.webp 1024w, img/optimized/factory-768.webp 768w">
+        <img src="img/optimized/factory-480.jpg" alt="戸田工場外観" loading="lazy" />
+      </picture>
+      <picture>
+        <source type="image/webp" srcset="img/optimized/factory2-1024.webp 1024w, img/optimized/factory2-768.webp 768w">
+        <img src="img/optimized/factory2-480.jpg" alt="戸田工場外観2" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</section>
   </main>
 
-  <!-- フッターコンポーネント -->
+  <!-- フッター -->
   <site-footer></site-footer>
 
-  <!-- 各コンポーネント用JS -->
+  <!-- JS -->
   <script src="js/header.js"></script>
   <script src="js/footer.js"></script>
-  <script src="/js/gtmtag.js"></script>
-  <!-- 会社情報ページ専用JS -->
-  <script src="js/company.js"></script>
-  
 </body>
 </html>
