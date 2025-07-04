@@ -227,16 +227,16 @@ class SiteHeader extends HTMLElement {
         </div>
         <div class="header-main">
           <div class="header-logo">
-            <a href="index.html">
-              <img src="img/logo.png" alt="協和合成ロゴ">
+            <a href="/index.html">
+              <img src="/img/logo.png" alt="協和合成ロゴ">
             </a>
             <div class="header-tagline" data-year="1961">創業1961年・</div>
           </div>
           <nav class="header-nav" id="nav">
             <ul>
-              <li><a href="index.html">ホーム</a></li>
-              <li><a href="company.html">会社情報</a></li>
-              <li><a href="recruit.html">求人情報</a></li>
+              <li><a href="/index.html">ホーム</a></li>
+              <li><a href="/company.html">会社情報</a></li>
+              <li><a href="/recruit.html">求人情報</a></li>
             </ul>
           </nav>
           <div class="menu-toggle" id="menuToggle">
