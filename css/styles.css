@@ -204,11 +204,10 @@ section {
 /* 既存 hover はPC専用に */
 @media (hover: hover) and (pointer: fine) {
   .news-item:hover {
+    outline: 4px solid #0066cc;
+    outline-offset: -1px;
     background-color: #f0f4f8;
     transform: translateY(-2px);
-    border-top-color: #0066cc;
-    border-right-color: #0066cc;
-    border-bottom-color: #0066cc;
   }
 }
 
