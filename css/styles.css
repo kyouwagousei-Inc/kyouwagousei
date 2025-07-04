@@ -163,16 +163,24 @@ section {
   gap: 1rem;
   background-color: #fff;
   border-left: 4px solid #0066cc;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-radius: 8px;
   padding: 1rem 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
 }
 
 .news-item:hover {
   background-color: #f0f4f8;
   transform: translateY(-2px);
+  border-top-color: #0066cc;
+  border-right-color: #0066cc;
+  border-bottom-color: #0066cc;
 }
+
 
 .news-date {
   font-weight: bold;
@@ -191,6 +199,25 @@ section {
 
 .news-link:hover {
   text-decoration: underline;
+}
+
+/* 既存 hover はPC専用に */
+@media (hover: hover) and (pointer: fine) {
+  .news-item:hover {
+    background-color: #f0f4f8;
+    transform: translateY(-2px);
+    border-top-color: #0066cc;
+    border-right-color: #0066cc;
+    border-bottom-color: #0066cc;
+  }
+}
+
+/* スマホのタップ選択感をフォーカスで表現 */
+.news-item:focus-within {
+  background-color: #f0f4f8;
+  border-top-color: #0066cc;
+  border-right-color: #0066cc;
+  border-bottom-color: #0066cc;
 }
 
 
