@@ -39,4 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
       sliderInterval = setInterval(nextSlide, 5000);
     }
   });
-  
+
+
