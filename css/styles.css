@@ -85,7 +85,7 @@ header.header {
 .hero-history {
   color: #fff;
   margin-top: 0.5rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 }
 
 /* 前後ナビゲーション（ボタン）の設定 */
@@ -115,8 +115,7 @@ header.header {
 
 /* 各セクション */
 section {
-  padding: 0 0 0 0;
-}
+padding: 4rem 0;}
 .section-title {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -142,7 +141,6 @@ section {
 }
 
 .news-section .section-title {
-  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #203764;
@@ -154,31 +152,18 @@ section {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* ← 余白を大きめに */
+  gap: 1rem; 
 }
 
 .news-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color: #fff;
-  border-left: 4px solid #0066cc;
-  border-top: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.2s ease;
-  box-sizing: border-box;
+  padding: 0; 
+  box-shadow: none;
+  border: none;
 }
 
 .news-item:hover {
   background-color: #f0f4f8;
   transform: translateY(-2px);
-  border-top-color: #0066cc;
-  border-right-color: #0066cc;
-  border-bottom-color: #0066cc;
 }
 
 
@@ -191,15 +176,23 @@ section {
 }
 
 .news-link {
-  font-size: 1rem;
-  color: #0066cc;
+  display: flex; 
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
   text-decoration: none;
-  line-height: 1.5;
+  color: inherit;
+  border: 2px solid #005bbb;
+  background-color: #f6f9fc;
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .news-link:hover {
-  text-decoration: underline;
-}
+  background-color: #e0f0ff;
+  border-color: #0066cc;
+} 
 
 /* 既存 hover はPC専用に */
 @media (hover: hover) and (pointer: fine) {
@@ -317,6 +310,9 @@ section {
   .hero-image {
     height: 50vh; /* スマホではちょい控えめに */
   }
+  .section-title{
+    font-size: 1.8rem;
+  }
 }
 
 /* スマホSサイズ用に高さ制限をかける */
@@ -329,15 +325,96 @@ section {
     top: 50%;  /* 少し下に下げる */
     transform: translate(-50%, -50%);
     font-size: 0.9rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 1rem;
   }
 
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .hero-subtitle,
   .hero-history {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
+.product-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  line-height: 1.8;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+}
+.product-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.product-card h3 {
+  color: #203764;
+  margin-bottom: 0.5rem;
+}
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+}
+.cta-button {
+  background-color: #005bbb;
+  color: #fff;
+}
+.cta-button:hover {
+  background-color: #004499;
+}
+
+/* 詳細を見るの小ボタン用 */
+.cta-button.small {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* 電話ボタンだけ個別に指定する */
+.cta-button.tel-button {
+  background-color: #28a745;
+}
+.cta-button.tel-button:hover {
+  background-color: #218838;
+}
+
+/* タイトル共通ルール */
+h1, .hero-title {
+  font-size: 2.5rem;
+}
+h2, .section-title {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+
+/* モバイル向け */
+@media (max-width: 768px) {
+  h1, .hero-title {
+    font-size: 2rem;
+  }
+  h2, .section-title {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
