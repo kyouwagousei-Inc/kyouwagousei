@@ -1,432 +1,116 @@
-/* ==============================
-   製品情報セクション（共通）
-============================== */
-.products-section {
-  padding: 4rem 0;
-  background-color: #fff;
-}
-.products-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.products-section .section-title {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #203764;
-}
-.products-section .section-text {
-  text-align: center;
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ==============================
-   タブスタイル
-============================== */
-.filter-tabs {
-  text-align: center;
-  margin: 2rem 0 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-.filter-tab {
-  padding: 0.75rem 1.5rem;
-  background-color: #e6f0ff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.filter-tab.active {
-  background-color: #0066cc;
-  color: #fff;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  transform: scale(1.03);
-}
-.filter-tab:hover {
-  background-color: #ccc;
-}
-
-/* ==============================
-   カテゴリ表示
-============================== */
-.product-category {
-  display: none;
-  animation: fadeIn 0.3s ease-in-out;
-  text-align: center;
-}
-.product-category.active {
-  display: block;
-}
-.product-list,
-.pain-points {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  padding-left: 0;
-  list-style: none;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #333;
-}
-.product-list li,
-.pain-points li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 0.5rem;
-}
-.product-list li::before,
-.pain-points li::before {
-  content: "\f00c";
-  font-family: "Font Awesome 5 Free";
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #007acc;
-}
-.product-list .subtext {
-  display: block;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 0.25rem;
-  padding-left: 0;
-}
-
-/* ==============================
-   CTAボタン
-============================== */
-.cta-box {
-  text-align: center;
-  margin-top: 2.5rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 2rem;
-}
-.cta-button {
-  display: inline-block;
-  background-color: #0066cc;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-  margin: 0.5rem;
-}
-.cta-button:hover {
-  background-color: #005bb5;
-}
-
-/* ==============================
-   ギャラリー
-============================== */
-.gallery-caption {
-  text-align: center;
-  font-size: 1rem;
-  color: #555;
-  margin: 1.5rem auto 0.5rem;
-  max-width: 800px;
-}
-.product-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2.5rem auto 2rem;
-  max-width: 1000px;
-}
-.product-gallery img {
-  width: 600px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-.product-gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* ==============================
-   営業文句エリア
-============================== */
-.sales-message {
-  max-width: 800px;
-  margin: 3rem auto 2rem;
-  padding: 1.5rem 1rem;
-  background: #fffbe6;
-  border-left: 5px solid #0066cc;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #333;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-.sales-message strong {
-  color: #d10000;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-/* ==============================
-   共感リード
-============================== */
-.highlight-lead {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #333;
-  font-weight: bold;
-  margin: 2rem auto 1rem;
-  max-width: 800px;
-  line-height: 1.6;
-}
-
-/* ==============================
-   対応フロー
-============================== */
-.flow-section {
-  max-width: 800px;
-  margin: 3rem auto 2rem;
-  padding: 2rem 1.5rem;
-  background: linear-gradient(135deg, #f9f9f9, #fdfdfd);
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  text-align: center;
-}
-.flow-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-.flow-steps {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: flex-start;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-  counter-reset: step;
-}
-.flow-steps li {
-  display: flex;
-  align-items: flex-start;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #333;
-  position: relative;
-  padding-left: 3rem;
-}
-.flow-steps li::before {
-  content: counter(step, decimal-leading-zero);
-  counter-increment: step;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #005bb5;
-  color: white;
-  font-weight: bold;
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* ==============================
-   アニメーション
-============================== */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ==============================
-   レスポンシブ対応
-============================== */
-@media (max-width: 768px) {
-  .products-section {
-    padding: 2rem 1rem;
-  }
-  .products-section .section-title {
-    font-size: 1.8rem;
-  }
-  .products-section .section-text {
-    font-size: 0.95rem;
-  }
-  .filter-tabs {
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: stretch;
-  }
-  .filter-tab {
-    width: 100%;
-    font-size: 1rem;
-    padding: 1rem;
-  }
-  .product-list,
-  .pain-points {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    padding-left: 1rem;
-  }
-  .product-list li,
-  .pain-points li {
-    padding-left: 1.5rem;
-  }
-  .product-list .subtext {
-    font-size: 0.85rem;
-    padding-left: 1.5rem;
-  }
-  .product-gallery img {
-    width: 90%;
-  }
-  .cta-button {
-    width: 100%;
-    max-width: 300px;
-    margin: 0.5rem auto;
-    display: block;
-    text-align: center;
-  }
-  .flow-section {
-    padding: 2rem 0rem;
-  }
-  .flow-title {
-    font-size: 1.1rem;
-  }
-  .flow-steps {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .flow-steps li {
-    font-size: 0.9rem;
-    padding-left: 2rem;
-  }
-  .flow-steps li::before {
-    font-size: 0.9rem;
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .filter-tab {
-    font-size: 0.95rem;
-    padding: 0.85rem;
-  }
-  .product-list,
-  .pain-points {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-  .sales-message {
-    padding: 1rem;
-    margin: 1rem 0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    background-color: #fffce0;
-  }
-}
+/* 基本 */
 .products-main section {
   padding: 4rem 1rem;
-  background-color: #fdfdfd;
 }
-.products-main h2 {
-  color: #203764; /* 信頼感ある法人系ネイビーブルー */
+.bg-white { background-color: #fff; }
+.bg-light { background-color: #f8f9fa; }
+.bg-accent { background-color: #005bbb; color: #fff; }
+
+.section-title {
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 2rem;
+  color: #203764;
 }
-.products-main p {
+.section-title i {
+  margin-right: 0.5rem;
+  color: #005bbb;
+}
+.section-subtitle {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #005bbb;
+  padding-left: 0.5rem;
+  color: #203764;
+}
+.section-text {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 2rem auto;
   font-size: 1rem;
   color: #333;
 }
-.products-main .container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.products-main h3 {
-  font-size: 1.3rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #203764;
-  border-left: 4px solid #203764;
-  padding-left: 0.5rem;
-}
 
-.products-main ul {
+/* product list */
+.product-list {
   list-style: none;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: center;
-  padding: 0;
+  gap: 1rem;
 }
-.products-main ul li {
-  background-color: #fff;
+.product-list li {
+  flex: 1 1 250px;
+  background: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 1rem;
-  width: 250px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
 }
-.products-main ul li:hover {
+.product-list li:hover {
   transform: translateY(-4px);
 }
 
-.products-main dl {
-  margin-top: 1rem;
+/* case cards */
+.case-studies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.case-card {
+  background: #f6f9fc;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.case-card h4 {
+  color: #203764;
+  margin-bottom: 0.5rem;
+}
+.case-card p {
+  font-size: 0.9rem;
+}
+
+/* FAQ */
+.faq {
+  max-width: 800px;
+  margin: 2rem auto 0 auto;
   border-top: 1px solid #ccc;
 }
-.products-main dt {
+.faq dt {
   margin-top: 1rem;
   font-weight: bold;
   color: #203764;
+  cursor: pointer;
 }
-.products-main dd {
+.faq dd {
   margin-left: 1rem;
   margin-bottom: 1rem;
 }
 
-.contact-cta {
+.contact-hours {
   text-align: center;
-  background-color: #f8f9fa;
-  padding: 4rem 1rem;
-}
-.contact-cta .cta-button {
-  display: inline-block;
-  margin: 1rem;
-  background-color: #0066cc;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.contact-cta .cta-button:hover {
-  background-color: #005bb5;
-}
-.contact-cta .contact-hours {
+  font-size: 0.9rem;
   margin-top: 1rem;
-  color: #333;
+}
+
+/* レスポンシブ */
+@media(max-width:768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .case-studies {
+    flex-direction: column;
+    align-items: center;
+  }
 }
