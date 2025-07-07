@@ -164,13 +164,48 @@ section {
   margin-left: auto;
   flex-shrink: 0;
 }
-
+.flow-section {
+  background-color: #f8f9fa;
+  padding: 4rem 1rem;
+}
 .flow-steps {
   max-width: 600px;
   margin: 2rem auto 0;
-  padding-left: 1rem;
+  padding: 0;
+  list-style: none;
 }
-.flow-steps li { margin-bottom: 1rem; }
+.flow-steps li {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 1rem 3.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.flow-steps li:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
+.flow-steps .step-number {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  background: #005bbb;
+  color: #fff;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
 .cta-box {
   text-align: center;
 }
