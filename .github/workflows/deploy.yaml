@@ -3,11 +3,14 @@ name: Deploy to S3
 on:
   push:
     branches:
-      - main  # ←変更したいブランチ名に合わせて
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: production
 
     steps:
       - name: Checkout source
@@ -22,4 +25,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-          SOURCE_DIR: "."  # ルートから全部アップロードする場合
+          SOURCE_DIR: "."
