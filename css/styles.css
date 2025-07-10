@@ -27,7 +27,11 @@ section {
   text-align: center;
   margin-bottom: 2rem;
 }
-.hero-section { position: relative; overflow: hidden; }
+.hero-section { 
+  position: relative; 
+  overflow: hidden; 
+  padding: 0%;
+}
 .hero-slider {
   position: relative;
   width: 100%;
