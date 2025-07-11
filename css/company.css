@@ -36,18 +36,21 @@ body {
   margin-top: 1rem;
   font-size: 1rem;
 }
+
 .company-table th,
 .company-table td {
   border: 1px solid #e0e0e0;
   padding: 1.2rem;
   vertical-align: top;
 }
+
 .company-table th {
   background-color: #f0f4f8;
   width: 30%;
   color: #203764;
   text-align: left;
 }
+
 .company-table td {
   background-color: #fff;
 }
@@ -61,6 +64,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 2rem 1rem; */
 }
+
 .map-title,
 .gallery-title {
   font-size: 1.5rem;
@@ -93,6 +97,7 @@ body {
   gap: 1rem;
   margin-top: 2rem;
 }
+
 .company-images picture {
   display: block;
   border-radius: 8px;
@@ -100,10 +105,12 @@ body {
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .company-images picture:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+
 .company-images img {
   width: 100%;
   aspect-ratio: 4/3;
@@ -115,10 +122,12 @@ body {
   .section-title {
     font-size: 1.8rem;
   }
+
   .map-title,
   .gallery-title {
     font-size: 1.3rem;
   }
+
   .company-table th,
   .company-table td {
     padding: 1rem;

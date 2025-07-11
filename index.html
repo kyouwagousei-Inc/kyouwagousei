@@ -16,12 +16,11 @@
   <meta property="og:url" content="https://www.kyouwagousei.co.jp/">
   <meta property="og:image" content="https://www.kyouwagousei.co.jp/img/ogp.jpg">
   <meta property="og:site_name" content="協和合成株式会社">
-
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<!-- FontAwesome 読み込み（アイコン表示に必要） -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-a5a5KEFnxjRZkQk3bHZJDK+R+EX4eYOIVW1BVRk+cRS2gRxZTCasWr5StpGU2A5uZZ6IgtEMj7MN1eGQn7AGDw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-a5a5KEFnxjRZkQk3bHZJDK+R+EX4eYOIVW1BVRk+cRS2gRxZTCasWr5StpGU2A5uZZ6IgtEMj7MN1eGQn7AGDw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -42,7 +41,7 @@
       ]
     }
     </script>
-    <script type="application/ld+json">
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -66,15 +65,13 @@
         }
       }
       </script>
-      
 </head>
+
 <body>
-  <!-- ヘッダー（コンポーネント化済み） -->
   <gtm-tag gtm-id="GTM-5V7G62JJ"></gtm-tag>
   <site-header></site-header>
-
   <main>
-<!-- ヒーローセクション：スライダー機能実装 -->
+    <!-- ヒーローセクション -->
     <section class="hero-section">
       <div class="hero-slider">
         <div class="slide active">
@@ -85,31 +82,29 @@
             <p class="hero-history">東京都文京区｜創業64年｜1961年11月設立</p>
           </div>
         </div>
-      <!-- スライド2（例） -->
-      <div class="slide">
-        <img src="img/main2.png" alt="製品の革新" class="hero-image">
-        <div class="hero-text">
-          <h1 class="hero-title">製品の革新</h1>
-          <p class="hero-subtitle">最新技術による革新的な製品</p>
+        <div class="slide">
+          <img src="img/main2.png" alt="製品の革新" class="hero-image">
+          <div class="hero-text">
+            <h1 class="hero-title">製品の革新</h1>
+            <p class="hero-subtitle">最新技術による革新的な製品</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/main3.png" alt="信頼と実績" class="hero-image">
+          <div class="hero-text">
+            <h1 class="hero-title">信頼と実績</h1>
+            <p class="hero-subtitle">長年の経験と実績に裏打ちされたサービス</p>
+          </div>
         </div>
       </div>
-      <!-- スライド3（例） -->
-      <div class="slide">
-        <img src="img/main3.png" alt="信頼と実績" class="hero-image">
-        <div class="hero-text">
-          <h1 class="hero-title">信頼と実績</h1>
-          <p class="hero-subtitle">長年の経験と実績に裏打ちされたサービス</p>
-        </div>
+      <!-- slider navi -->
+      <div class="slider-nav">
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
       </div>
-    </div>
-    <!-- 前後のナビゲーション -->
-    <div class="slider-nav">
-      <button class="prev">Prev</button>
-      <button class="next">Next</button>
-    </div>
-  </section>
+    </section>
 
-    <!-- 新着情報 -->
+    <!-- news -->
     <section class="news-section bg-light">
       <div class="container">
         <h2 class="section-title">新着情報</h2>
@@ -118,8 +113,7 @@
             <a href="news20250818.html" class="news-link">
               <time class="news-date">2025.08.18</time>
               営業時間変更のお知らせ
-                    <span class="news-new">NEW</span>
-
+              <span class="news-new">NEW</span>
             </a>
           </li>
           <li class="news-item">
@@ -132,7 +126,7 @@
       </div>
     </section>
 
-    <!-- 製品 -->
+    <!-- products -->
     <section class="products-section bg-white">
       <div class="container">
         <h2 class="section-title">取り扱い製品・サービス</h2>
@@ -159,37 +153,37 @@
         </div>
       </div>
     </section>
-    <!-- ギャラリー -->
-<section class="gallery-section bg-light">
-  <div class="container">
-    <h2 class="section-title">実際の製品写真・イメージ</h2>
 
-    <div class="gallery-slider-wrapper">
-      <div class="gallery-slider">
-        <div class="slide active">
-          <img src="img/meshfilter.png" alt="フィルター製品" loading="lazy" />
-        </div>
-        <div class="slide">
-          <img src="img/products2.png" alt="フィルター製品" loading="lazy" />
-        </div>
-        <div class="slide">
-          <img src="img/AHU-sample.png" alt="施工例" loading="lazy" />
-        </div>
-        <div class="slide">
-          <img src="img/AHU-sample2.png" alt="施工例" loading="lazy" />
+    <!-- gallery -->
+    <section class="gallery-section bg-light">
+      <div class="container">
+        <h2 class="section-title">実際の製品写真・イメージ</h2>
+        <p class="section-text small">※一部画像はAIによるイメージ図です。</p>
+        <div class="gallery-slider-wrapper">
+          <div class="gallery-slider">
+            <div class="slide active">
+              <img src="img/meshfilter.png" alt="フィルター製品" loading="lazy" />
+            </div>
+            <div class="slide">
+              <img src="img/products2.png" alt="フィルター製品" loading="lazy" />
+            </div>
+            <div class="slide">
+              <img src="img/AHU-sample.png" alt="施工例" loading="lazy" />
+            </div>
+            <div class="slide">
+              <img src="img/AHU-sample2.png" alt="施工例" loading="lazy" />
+            </div>
+          </div>
+          <!-- gallery modal -->
+          <div id="gallery-modal" class="gallery-modal">
+            <span class="gallery-close">&times;</span>
+            <img class="gallery-modal-img" src="" alt="拡大画像" />
+          </div>
         </div>
       </div>
-      <!-- ギャラリーモーダル -->
-<div id="gallery-modal" class="gallery-modal">
-  <span class="gallery-close">&times;</span>
-  <img class="gallery-modal-img" src="" alt="拡大画像" />
-</div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-    <!-- セールス -->
+    <!-- sales -->
     <section class="sales-highlight bg-accent">
       <div class="container">
         <p>
@@ -198,35 +192,35 @@
         </p>
       </div>
     </section>
-    <!-- 流れ -->
-<section class="flow-section bg-light">
-  <div class="container">
-    <h2 class="section-title">ご対応の流れ</h2>
-    <ol class="flow-steps">
-      <li>
-        <span class="step-number">1</span>
-        お問い合わせ（電話・メール）
-      </li>
-      <li>
-        <span class="step-number">2</span>
-        ご要望のヒアリング
-      </li>
-      <li>
-        <span class="step-number">3</span>
-        現場確認または図面での検討
-      </li>
-      <li>
-        <span class="step-number">4</span>
-        お見積・納期のご案内
-      </li>
-      <li>
-        <span class="step-number">5</span>
-        製作・発送・納品
-      </li>
-    </ol>
-  </div>
-</section>
 
+    <!-- flow -->
+    <section class="flow-section bg-light">
+      <div class="container">
+        <h2 class="section-title">ご対応の流れ</h2>
+        <ol class="flow-steps">
+          <li>
+            <span class="step-number">1</span>
+            お問い合わせ（電話・メール）
+          </li>
+          <li>
+            <span class="step-number">2</span>
+            ご要望のヒアリング
+          </li>
+          <li>
+            <span class="step-number">3</span>
+            現場確認または図面での検討
+          </li>
+          <li>
+            <span class="step-number">4</span>
+            お見積・納期のご案内
+          </li>
+          <li>
+            <span class="step-number">5</span>
+            製作・発送・納品
+          </li>
+        </ol>
+      </div>
+    </section>
 
     <!-- CTA -->
     <section class="cta-section bg-white">
@@ -239,10 +233,7 @@
       </div>
     </section>
   </main>
-  <!-- フッター（コンポーネント化済み） -->
   <site-footer></site-footer>
-
-  <!-- コンポーネント用JSファイルの読み込み -->
   <script src="js/header.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/slider.js"></script>

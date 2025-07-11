@@ -2,9 +2,19 @@
 .products-main section {
   padding: 4rem 1rem;
 }
-.bg-white { background-color: #fff; }
-.bg-light { background-color: #f8f9fa; }
-.bg-accent { background-color: #ebf5ff; color: #fff; }
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.bg-accent {
+  background-color: #ebf5ff;
+  color: #fff;
+}
 
 .section-title {
   text-align: center;
@@ -12,10 +22,12 @@
   margin-bottom: 2rem;
   color: #203764;
 }
+
 .section-title i {
   margin-right: 0.5rem;
   /* color: #005bbb; */
 }
+
 .section-subtitle {
   font-size: 1.3rem;
   margin-top: 2rem;
@@ -24,6 +36,7 @@
   padding-left: 0.5rem;
   color: #203764;
 }
+
 .section-text {
   text-align: center;
   max-width: 800px;
@@ -43,15 +56,17 @@
   justify-content: center;
   gap: 1rem;
 }
+
 .product-list li {
   flex: 1 1 250px;
   background: #fff;
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
+
 .product-list li:hover {
   transform: translateY(-4px);
 }
@@ -63,6 +78,7 @@
   justify-content: center;
   gap: 1rem;
 }
+
 .case-card {
   background: #f6f9fc;
   border: 1px solid #ddd;
@@ -70,12 +86,14 @@
   border-radius: 8px;
   flex: 1 1 300px;
   max-width: 400px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 .case-card h4 {
   color: #203764;
   margin-bottom: 0.5rem;
 }
+
 .case-card p {
   font-size: 0.9rem;
 }
@@ -86,12 +104,14 @@
   margin: 2rem auto 0 auto;
   border-top: 1px solid #ccc;
 }
+
 .faq dt {
   margin-top: 1rem;
   font-weight: bold;
   color: #203764;
   cursor: pointer;
 }
+
 .faq dd {
   margin-left: 1rem;
   margin-bottom: 1rem;
@@ -110,6 +130,7 @@
     /* flex-direction: column; */
     align-items: center;
   }
+
   .case-studies {
     /* flex-direction: column; */
     align-items: center;
