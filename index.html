@@ -158,14 +158,40 @@
       </div>
     </section>
     <!-- ギャラリー -->
-    <section class="gallery-section bg-light">
-      <div class="container">
-        <h2 class="section-title">実際の製品写真</h2>
-        <div class="product-gallery">
-          <img src="img/products2.png" alt="施工例" />
+<section class="gallery-section bg-light">
+  <div class="container">
+    <h2 class="section-title">実際の製品写真・イメージ</h2>
+
+    <div class="gallery-slider-wrapper">
+      <div class="gallery-slider">
+        <div class="slide active">
+          <img src="img/meshfilter.png" alt="フィルター製品1" loading="lazy" />
+        </div>
+        <div class="slide">
+          <img src="img/products2.png" alt="施工例" loading="lazy" />
+        </div>
+        <div class="slide">
+          <img src="img/AHU-sample.png" alt="フィルター製品2" loading="lazy" />
+        </div>
+        <div class="slide">
+          <img src="img/AHU-sample2.png" alt="フィルター製品3" loading="lazy" />
         </div>
       </div>
-    </section>
+      <!-- ギャラリーモーダル -->
+<div id="gallery-modal" class="gallery-modal">
+  <span class="gallery-close">&times;</span>
+  <img class="gallery-modal-img" src="" alt="拡大画像" />
+</div>
+
+      <!-- スライダーのナビゲーション（モバイル表示時のみ） -->
+      <div class="gallery-nav">
+        <button class="gallery-prev">Prev</button>
+        <button class="gallery-next">Next</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- セールス -->
     <section class="sales-highlight bg-accent">
