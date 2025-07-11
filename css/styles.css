@@ -110,72 +110,66 @@ section {
 .gallery-slider-wrapper {
   position: relative;
   margin-top: 2rem;
+  overflow: visible; /* ← ここを visible に変更 */
 }
 
 .gallery-slider {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-    overflow-x: auto;
+  justify-content: flex-start;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 1rem;
 }
 
 .gallery-slider .slide {
-    scroll-snap-align: start;
-  flex: 0 0 auto; /* 固定幅スライド用 */
-  flex: 1 1 250px;
-  max-width: 250px;
-  aspect-ratio: 1 / 1; /* 正方形で統一 */
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 250px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .gallery-slider .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* はみ出し部分はトリミング */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
   transition: transform 0.3s;
+  cursor: zoom-in;
 }
 
+/* 拡大アイコン表示 */
+.gallery-slider .slide::after {
+  content: "\f00e"; /* FontAwesome: 検索虫眼鏡 */
+  font-family: "Font Awesome 5 Free"; /* ※読み込み済前提 */
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.3rem 0.4rem;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  pointer-events: none;
+  z-index: 1;
+}
 
-/* スライダー動作用：スマホ限定 */
+/* モバイル時のスワイプ対応 */
 @media (max-width: 768px) {
   .gallery-slider {
     flex-wrap: nowrap;
-    overflow: hidden;
-    position: relative;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
   }
 
   .gallery-slider .slide {
-    display: none;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .gallery-slider .slide.active {
-    display: block;
-  }
-
-  .gallery-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-  }
-}
-
-/* PCでは常時表示＆ナビ非表示 */
-@media (min-width: 769px) {
-  .gallery-slider .slide {
-    display: block !important;
+    width: 80vw;
+    flex-shrink: 0;
   }
 
   .gallery-nav {
@@ -183,7 +177,7 @@ section {
   }
 }
 
-/* モーダル全体 */
+/* モーダル */
 .gallery-modal {
   display: none;
   position: fixed;
@@ -193,15 +187,11 @@ section {
   justify-content: center;
   align-items: center;
 }
-
-/* モーダル画像 */
 .gallery-modal-img {
   max-width: 90vw;
   max-height: 90vh;
   border-radius: 8px;
 }
-
-/* 閉じるボタン */
 .gallery-close {
   position: absolute;
   top: 1rem;
@@ -211,6 +201,8 @@ section {
   cursor: pointer;
   user-select: none;
 }
+
+
 
 
 .sales-highlight {
