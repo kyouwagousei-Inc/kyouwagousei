@@ -42,7 +42,7 @@ class SiteFooter extends HTMLElement {
           right: 20px;
           width: 44px;
           height: 44px;
-          background-color: rgba(0, 23, 193, 0.7); /* 濃い青を半透明に */
+          background-color: #005bbb; /* 濃い青を半透明に */
           color: #fff;
           border-radius: 50%;
           display: flex;
@@ -58,7 +58,7 @@ class SiteFooter extends HTMLElement {
         }
         .back-to-top:hover {
           transform: translateY(-4px);
-          background-color: rgba(0, 16, 160, 0.7);
+          background-color: rgba(1, 90, 255, 0.57);
         }
         .back-to-top.show {
           opacity: 1;
