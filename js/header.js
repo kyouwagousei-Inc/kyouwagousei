@@ -34,6 +34,7 @@ class SiteHeader extends HTMLElement {
           display: flex;
           align-items: center;
           gap: 0.5rem;
+          cursor: pointer;
         }
 
         .contact-link:hover {
@@ -104,27 +105,16 @@ class SiteHeader extends HTMLElement {
           transition: 0.4s;
         }
 
-        .menu-toggle span:nth-child(1) {
-          top: 4px;
-        }
-
-        .menu-toggle span:nth-child(2) {
-          top: 11px;
-        }
-
-        .menu-toggle span:nth-child(3) {
-          top: 18px;
-        }
+        .menu-toggle span:nth-child(1) { top: 4px; }
+        .menu-toggle span:nth-child(2) { top: 11px; }
+        .menu-toggle span:nth-child(3) { top: 18px; }
 
         .menu-toggle.active span:nth-child(1) {
           top: 11px;
           transform: rotate(45deg);
         }
 
-        .menu-toggle.active span:nth-child(2) {
-          opacity: 0;
-        }
-
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
         .menu-toggle.active span:nth-child(3) {
           top: 11px;
           transform: rotate(-45deg);
@@ -169,60 +159,37 @@ class SiteHeader extends HTMLElement {
             border-top: 1px solid #ccc;
           }
 
-          .header-nav.active {
-            display: flex !important;
-          }
+          .header-nav.active { display: flex !important; }
 
           .header-nav ul {
-            display: flex;
             flex-direction: column;
-            align-items: stretch;
-            justify-content: center;
             width: 100%;
             margin: 0;
             padding: 0;
           }
 
-          .header-nav li {
-            list-style: none;
-            margin: 0;
-            text-align: center;
-            width: 100%;
-          }
+          .header-nav li { margin: 0; text-align: center; }
 
           .header-nav a {
             display: block;
             padding: 0.75rem 1rem;
             color: #003366;
             font-weight: bold;
-            text-decoration: none;
             border-bottom: 1px solid #eee;
           }
 
-          .header-nav a:hover {
-            background-color: #f3f3f3;
-          }
+          .header-nav a:hover { background-color: #f3f3f3; }
 
-          .header-top {
-            padding: 0.5rem;
-          }
-
-          .header-contact {
-            flex-direction: column;
-            gap: 0.25rem;
-          }
-
-          .contact-link {
-            font-size: 0.7rem;
-            text-align: center;
-          }
+          .header-top { padding: 0.5rem; }
+          .header-contact { flex-direction: column; gap: 0.25rem; }
+          .contact-link { font-size: 0.7rem; text-align: center; }
         }
       </style>
       <header class="header">
         <div class="header-top">
           <div class="header-contact">
             <a href="tel:0339450526" class="contact-link">📞 お電話でのお問い合わせ：<strong>03-3945-0526</strong></a>
-            <a href="mailto:info@kyouwagousei.co.jp" class="contact-link">📧 メールでのお問い合わせ：<strong>info@kyouwagousei.co.jp</strong></a>
+            <span id="safe-email-header-link" class="contact-link">📧 メールでのお問い合わせ</span>
           </div>
         </div>
         <div class="header-main">
@@ -235,9 +202,7 @@ class SiteHeader extends HTMLElement {
           <nav class="header-nav" id="nav">
             <ul>
               <li><a href="index.html">ホーム</a></li>
-             <!-- <li><a href="products.html">製品・サービス</a></li> -->
               <li><a href="company.html">会社概要</a></li>
-              <!-- <li><a href="recruit.html">求人情報</a></li> -->
             </ul>
           </nav>
           <div class="menu-toggle" id="menuToggle">
@@ -252,8 +217,19 @@ class SiteHeader extends HTMLElement {
     this._toggleMenu = this._toggleMenu.bind(this);
     this._handleOutsideClick = this._handleOutsideClick.bind(this);
     this._closeMenu = this._closeMenu.bind(this);
-    // コンストラクタ末尾に追加
     this._updateTagline();
+
+    // ✅ 安全なメールリンク設定
+    const encodedParts = ["aW5m","b0Br","eW91","d2Fn","b3Vz","ZWku","Y28u","anA="];
+    const email = atob(encodedParts.join(""));
+    const subject = encodeURIComponent("協和合成へのお問い合わせ");
+    const body = encodeURIComponent("以下にご記入ください。\n\n会社名：\nお名前：\nお問い合わせ内容：");
+
+    const emailLink = shadow.getElementById("safe-email-header-link");
+    emailLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    });
   }
 
   connectedCallback() {
@@ -261,9 +237,7 @@ class SiteHeader extends HTMLElement {
     menuToggle.addEventListener('click', this._toggleMenu);
 
     const navLinks = this.shadowRoot.querySelectorAll('.header-nav a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', this._closeMenu);
-    });
+    navLinks.forEach(link => link.addEventListener('click', this._closeMenu));
 
     document.addEventListener('click', this._handleOutsideClick);
   }
@@ -273,9 +247,7 @@ class SiteHeader extends HTMLElement {
     menuToggle.removeEventListener('click', this._toggleMenu);
 
     const navLinks = this.shadowRoot.querySelectorAll('.header-nav a');
-    navLinks.forEach(link => {
-      link.removeEventListener('click', this._closeMenu);
-    });
+    navLinks.forEach(link => link.removeEventListener('click', this._closeMenu));
 
     document.removeEventListener('click', this._handleOutsideClick);
   }
@@ -298,11 +270,11 @@ class SiteHeader extends HTMLElement {
   }
 
   _handleOutsideClick(event) {
-    const path = event.composedPath();
-    if (!path.includes(this)) {
+    if (!event.composedPath().includes(this)) {
       this._closeMenu();
     }
   }
+
   _updateTagline() {
     const tagline = this.shadowRoot.querySelector('.header-tagline');
     if (!tagline) return;

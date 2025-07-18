@@ -30,9 +30,27 @@ class SiteFooter extends HTMLElement {
           margin: 0 0.75rem;
         }
 
+        .footer-nav a {
+          margin: 0 0.5rem;
+          text-decoration: none;
+          color: #005bbb;
+          font-size: 0.9rem;
+          cursor: pointer;
+        }
+        .footer-nav a:hover {
+          text-decoration: underline;
+        }
+
         .footer-text {
           font-size: 0.85rem;
           color: #666;
+          margin-top: 1rem;
+        }
+
+        .footer-address {
+          font-size: 0.85rem;
+          color: #666;
+          margin-top: 0.5rem;
         }
 
         /* 戻るボタン */
@@ -42,7 +60,7 @@ class SiteFooter extends HTMLElement {
           right: 20px;
           width: 44px;
           height: 44px;
-          background-color: #005bbb; /* 濃い青を半透明に */
+          background-color: #005bbb;
           color: #fff;
           border-radius: 50%;
           display: flex;
@@ -75,11 +93,8 @@ class SiteFooter extends HTMLElement {
           }
         }
       </style>
-      <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-/>
-
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 
       <footer class="site-footer">
         <div class="footer-inner">
@@ -87,20 +102,25 @@ class SiteFooter extends HTMLElement {
             <span>Tel: 03-3945-0526</span>
             <span>Fax: 03-3947-1990</span>
             <span>営業時間: 9:00〜17:00（土日祝除く）</span>
-            <a href="privacy.html">個人情報保護方針</a>
           </div>
+          <nav class="footer-nav" aria-label="フッターナビゲーション">
+            <a href="company.html">会社情報</a> |
+            <a href="products.html">製品情報</a> |
+            <a id="safe-email-link">お問い合わせ</a> |
+            <a href="privacy.html">個人情報保護方針</a>
+          </nav>
+          <address class="footer-address">東京都文京区本駒込6-5-3 ビューネ本駒込ビル8階</address>
           <p class="footer-text">© 2025 協和合成株式会社. All Rights Reserved.</p>
-          
         </div>
       </footer>
 
       <!-- 戻るボタン -->
-      <a href="#" class="back-to-top" aria-label="ページトップに戻る">
+      <a href="#" class="back-to-top" role="button" aria-label="ページトップに戻る">
         <i class="fas fa-arrow-up"></i>
       </a>
     `;
 
-    // ボタンの挙動
+    // 戻るボタンの表示制御
     window.addEventListener('scroll', () => {
       const backToTop = shadow.querySelector('.back-to-top');
       if (window.scrollY > 200) {
@@ -109,13 +129,26 @@ class SiteFooter extends HTMLElement {
         backToTop.classList.remove('show');
       }
     });
+
+    // 戻るボタンクリックでスクロール
     const backToTop = shadow.querySelector('.back-to-top');
     backToTop.addEventListener('click', (e) => {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // セキュアなメールリンク設定
+    const encodedParts = [
+      "aW5m", "b0Br", "eW91", "d2Fn", "b3Vz", "ZWku", "Y28u", "anA="
+    ];
+    const email = atob(encodedParts.join(""));
+    const subject = encodeURIComponent("協和合成へのお問い合わせ");
+    const body = encodeURIComponent("以下にご記入ください。\n\n会社名：\nお名前：\nお問い合わせ内容：");
+
+    const emailLink = shadow.querySelector("#safe-email-link");
+    emailLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     });
   }
 }

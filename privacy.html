@@ -75,7 +75,9 @@
                     style="font-size: 1.5rem; text-align: left;margin-top: 2rem; margin-bottom: 0;">8. お問い合わせ窓口</h2>
                 <p>個人情報の取り扱いに関するお問い合わせは下記までご連絡ください：<br>
                     協和合成株式会社<br>
-                    E-mail: info@kyouwagousei.co.jp
+                    <span id="safe-email-privacy" style="color:#005bbb;cursor:pointer;text-decoration:underline;">
+                        お問い合わせはこちら
+                    </span>
                 </p>
             </div>
         </section>
@@ -85,6 +87,23 @@
     <script src="js/gtmtag.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
+    <script>
+        (function () {
+            const parts = ["aW5m", "b0Br", "eW91", "d2Fn", "b3Vz", "ZWku", "Y28u", "anA="];
+            const email = atob(parts.join(""));
+            const subject = encodeURIComponent("協和合成へのお問い合わせ");
+            const body = encodeURIComponent("以下にご記入ください。\n\n会社名：\nお名前：\nお問い合わせ内容：");
+
+            const link = document.getElementById("safe-email-privacy");
+            if (link) {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+                });
+            }
+        })();
+    </script>
+
 </body>
 
 </html>
