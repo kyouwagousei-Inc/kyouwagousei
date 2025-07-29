@@ -195,7 +195,7 @@ class SiteHeader extends HTMLElement {
         <div class="header-main">
           <div class="header-logo">
             <a href="index.html">
-              <img src="img/logo-l.png" alt="協和合成ロゴ">
+              <img src="img/logo.png" alt="協和合成ロゴ">
             </a>
             <div class="header-tagline" data-year="1961">創業1961年・</div>
           </div>
